@@ -1,0 +1,175 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+/* General Touchs */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --b2-color: #44b38e;
+  --bg-color: #24ae80;
+  --fo-color: #191414;
+  --re-color: #fae62d;
+  --bo-shado: 8px 4px 8px 4px rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  --bo-shado2: 16px 8px 16px 8px rgba(255, 255, 255, 0.3), 6px 12px 40px 6px rgba(255, 255, 255, 0.824);
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: var(--b2-color);
+}
+
+h6 {
+
+  text-align: center; 
+  color: var(--re-color);
+}
+hr {
+  color:var(--re-color) ;
+  margin: 1vw 3vw 1vw 3vw;
+  width: auto;
+  border-top: 2px solid;
+
+}
+
+
+#main {
+  text-align: center;
+  background-color: var(--bg-color);
+  margin: 1rem;
+  align-items: center;
+  border-radius: 1%;
+  font-size: 1em;
+  box-shadow: var(--bo-shado);
+
+}
+
+
+#title {
+  font-size: xx-large;
+  color: var(--re-color);
+}
+
+
+/* Image Fixing */
+#img-div {
+  align-items: center;
+  background-color: var(--b2-color);
+  box-shadow: var(--bo-shado);
+  margin: 0 5vw 0 5vw;
+  padding: 0.5vw;
+  border-radius: 10%;
+  height: auto;
+
+
+}
+
+#img-caption {
+  margin-top: 1vw;
+}
+
+#image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-height: 50vh;
+  box-shadow: var(--bo-shado);
+  border-radius: 10%;
+  opacity: 1;
+  transition-duration: 2s;
+
+}
+
+#image:hover {
+  -webkit-transform: scale(1.2) rotate(-10deg);
+  transform: scale(1.2) rotate(-10deg);
+  box-shadow: var(--bo-shado2);
+
+}
+
+/* Corpus */
+
+#tribute-info {
+  margin: 1% 10% 0% 10%;
+  text-align: left;
+}
+
+#tribute-link {
+  color: white;
+  text-decoration: none;
+}
+
+.subtitle {
+  color: #fae62d;
+  /* text-decoration: underline; */
+  text-decoration-style: solid;
+  font-size: 140%;
+
+}
+
+/* Buttons */
+.remo-btn {
+  text-decoration: solid;
+  position: relative;
+  background-color: var(--bg-color) ;
+  border: none;
+  color: #fae62d;
+  padding: 10px;
+  font-size: large;
+  text-align: center;
+  transition-duration: 2s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5%;
+  box-shadow: var(--bo-shado);
+  font-weight: bold;
+}
+
+.remo-btn:hover {
+  -webkit-transform: scale(1.8) rotate(1deg);
+  transform: scale(1.8) rotate(10deg);
+  box-shadow: var(--bo-shado2);
+  
+}
+#early-btn:hover {
+  
+  -webkit-transform: scale(1.8) rotate(-10deg);
+  transform: scale(1.8) rotate(-10deg);
+}
+
+#crypto-btn:hover {
+  
+  -webkit-transform: scale(1.8) rotate(-10deg);
+  transform: scale(1.8) rotate(-10deg);
+}
+
+#more-btn:hover {
+  -webkit-transform: scale(2) rotate(0deg);
+  transform: scale(2) rotate(0deg);
+  
+}
+
+.remo-btn:after {
+  content: "";
+  background: #fae62d;
+  display: flex;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -50% !important;
+  opacity: 0;
+  transition: all 1s;
+  border-radius: 90%;
+}
+
+.remo-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
