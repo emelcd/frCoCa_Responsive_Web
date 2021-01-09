@@ -1,37 +1,40 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;1,700&display=swap');
+/* General Rules */
 :root {
-  --bg-color: #e8eae3;
-  --fo-color: #373833;
-  --re-color: #fa2742;
+
+  /* Shapes */
+  --sh1-color: #05386B;
+  --sh2-color: #379683;
+  --sh3-color: #5cdb95;
+  --sh4-color: #8ee4af;
+  --sh5-color: #edf5e1;
+/* Border */
+  --sma-border: 1px solid var(--sh4-color);
+  --big-border: 2px double var(--sh4-color);
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: Poppins, sans-serif;
-  transition: 1s;
+  font-family: 'Roboto Mono', monospace;
+  transition: .2s;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--fo-color);
-}
-#title {
-  color: var(--re-color);
-  text-align: center;
-  font-size: 40px;
-  font-weight: bold;
-  box-shadow: lightcoral;
+  background-color: var(--sh5-color);
+  color: var(--sh5-color);
+  
 }
 main {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 2em auto;
+  width: 750px;
   text-align: center;
   /* padding: 2rem; */
-  background-color: #ced4da;
-  margin: 10% 10% 15% 10%;
+  background-color: var(--sh1-color);
+  /* border: 2rem solid var(--sh2-color); */
   border-radius: 2rem;
+  display: grid;
+  
 }
 p {
   text-align: center;
@@ -43,26 +46,25 @@ p {
   height: 1rem;
   padding: 0.375rem 0.75rem;
   color: #000000;
-  background-color: white;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid var(--sh4-color);
   border-radius: 25rem;
-
+  
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 
 /* #survey-form {
     margin-left: 10%;
-} */
+  } */
 
-.submit-button {
+  .submit-button {
   font-size: larger;
   text-align: center;
   background-color: var(--re-color);
   padding: 7px 20px;
-  border-radius: 10%;
-  margin-bottom: 1rem;
+  border-radius: 20%;
+  margin: 1rem 0 1rem 0;
   transition: 2s;
 }
 
@@ -75,7 +77,8 @@ p {
 textarea {
   resize: none;
   scrollbar-color: var(--fo-color);
-  margin-top: 1rem;
+  margin: 1rem;
+  border-radius: 5%;
 }
 
 .form-group {
@@ -84,19 +87,96 @@ textarea {
 }
 
 #check {
-  text-align: left;
+  text-align: justify;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  margin: 0 1rem 0 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  margin: 0 2rem 0 2rem;
+  border-left: var(--sma-border);
+  border-right: var(--sma-border);
+  border-top: var(--big-border) ;
+
   
+}
+
+hr {
+  width: 80%;
+  text-align: center;
+  margin: auto;
 }
 
 .clue {
   font-style: oblique;
   font-size: xx-small;
-  color: var(--re-color);
+  color: var(--r2-color);
 }
 
 #most-like {
   height: 2rem;
 }
+
+#contact {
+  display: grid;
+  background-color: var(--bg-color);
+  margin: 5% 20% 0 20%;
+  border-radius: 20%;
+}
+
+input::-webkit-input-placeholder{
+  text-align: center
+  }
+  
+.input-textarea::-webkit-input-placeholder {
+  text-align: center;
+}
+
+#number-input {
+  width: 20%;
+}
+
+
+.subtitle {
+  color: var(--r1-color);
+  margin-top: 10px;
+  
+}
+
+
+.subpart-1 {
+  
+  border-bottom: var(--big-border);
+  
+  
+}
+.subpart-2 {
+  
+  width: 50%;
+  border-bottom: var(--big-border);
+  border-right: var(--sma-border);
+  
+  
+}
+
+/* Id Selections */
+#title {
+  color: var(--sh1-color);
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  background-color: var(--sh2-color);
+  position: relative;
+  border-radius: 2rem;
+  
+}
+
+
+#input-checkbox{
+  color: var(--r3-color)
+}
+
+#processor-memo {
+  height: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  margin: 0 2rem 0 2rem;
+}
+

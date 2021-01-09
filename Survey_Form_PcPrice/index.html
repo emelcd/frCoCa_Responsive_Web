@@ -1,177 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pc Seller</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <main id="main">
-      <header class="header">
-        <h1 id="title">Pc Seller</h1>
-        <p id="description">Rate your PC and get the highest price for it</p>
-      </header>
-      <form action="" id="survey-form">
-        <div class="form-group">
-          <label id="number-label" for="number"
-            >Age<span class="clue">(optional)</span></label
-          >
-          <input
-            type="number"
-            name="age"
-            id="number"
-            min="1"
-            max="15"
-            class="form-control"
-            placeholder="Age"
-          />
-        </div>
-        <div class="form-group">
-            <h5>
-              What is your favorite feature of freeCodeCamp?
-            </h5>
-            <select id="most-like" name="mostLike" class="form-control" required>
-              <option disabled selected value>Select an option</option>
-              <option value="challenges">Challenges</option>
-              <option value="projects">Projects</option>
-              <option value="community">Community</option>
-              <option value="openSource">Open Source</option>
-            </select>
-          </div>
-          <p>
-            What would you like to see improved?<br>
-            <span class="clue">(Check all that apply)</span>
-          </p>
-          <div id="check" class="form-group">
-      
-            <label
-              ><input
-                name="prefer"
-                value="front-end-projects"
-                type="checkbox"
-                class="input-checkbox"
-              />Front-end Projects</label
-            >
-            <label>
-              <input
-                name="prefer"
-                value="back-end-projects"
-                type="checkbox"
-                class="input-checkbox"
-              />Back-end Projects</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="data-visualization"
-                type="checkbox"
-                class="input-checkbox"
-              />Data Visualization</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="challenges"
-                type="checkbox"
-                class="input-checkbox"
-              />Challenges</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="open-source-community"
-                type="checkbox"
-                class="input-checkbox"
-              />Open Source</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="gitter-help-rooms"
-                type="checkbox"
-                class="input-checkbox"
-              />Gitter help rooms</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="videos"
-                type="checkbox"
-                class="input-checkbox"
-              />Videos</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="city-meetups"
-                type="checkbox"
-                class="input-checkbox"
-              />City Meetups</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="wiki"
-                type="checkbox"
-                class="input-checkbox"
-              />Wiki</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="forum"
-                type="checkbox"
-                class="input-checkbox"
-              />Forum</label
-            >
-            <label
-              ><input
-                name="prefer"
-                value="additional-courses"
-                type="checkbox"
-                class="input-checkbox"
-              />Additional Courses</label
-            >
-          </div>
-          <div class="form-group">
-            <label id="name-label" for="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="form-control"
-              placeholder="Enter your name"
-              required
-            />
-            <label id="email-label" for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              class="form-control"
-              placeholder="Enter your Email"
-              required
-            />
-            <p>Any comments or suggestions?</p>
-            <textarea
-              id="comments"
-              class="input-textarea"
-              name="comment"
-              placeholder="Enter your comment here..."
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pc Seller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main id="main">
+    <header class="header">
+      <h1 id="title">Pc Seller</h1>
+      <p id="description">Rate your PC and get the highest price for it</p>
+      <hr>
+    </header>
+    <form action="" id="survey-form">
+      <section class="subpart-1">
+        <h4 class="subtitle span">
+          What brand is your computer?<br>
+          <span class="clue">(Just Select One)</span>
+        </h4>
+        <div id="check" class="form-group">
   
-              
-            ></textarea>
-          </div>
-      </div>
-        
-        <div class="form-button">
-            <button type="submit" id="submit" class="submit-button">
-              Submit
-            </button>
+          <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Asus</label>
+          <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Acer</label>
+          <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Apple</label>
+          <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Dell</label>
+          <label><input name="prefer" value="open-source-community" type="checkbox"class="input-checkbox" />Lenovo</label>
+          <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Microsoft</label>
+          <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />HP</label>
+          <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />LG</label>
+          <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Samsung</label>
+          <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox" />Toshiba</label>
+          <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox" />Xiaomi</label>
+          <label><input name="prefer" value="non-know" type="checkbox" class="input-checkbox" />Not Know</label>
         </div>
-      </form>
-    </main>
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
-  </body>
+
+      </section>
+      <section class="subpart-2">
+
+        <div id="type-age" class="form-group">
+          <label id="number-label" for="number" class="subtitle">Orginal Price<span class="clue">(optional)</span></label>
+          <input id="number-input" type="number" name="price" id="number" min="0" max="2500" step="100" class="form-control"
+            placeholder="€?" />
+          <h4 class="subtitle">
+            state?
+          </h4>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+  
+          <h4 class="subtitle">
+            Kind of computer?
+          </h4>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+      </section>
+      </div>
+      <div class="form-group">
+      </div>
+
+      <div id="contact" class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" class="input-textarea" name="comment"
+          placeholder="Enter your comment here..."></textarea>
+      </div>
+      </div>
+
+      <div class="form-button">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+ 
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <script>
+    $("input:checkbox").on('click', function () {
+      var $box = $(this);
+      if ($box.is(":checked")) {
+        var group = "input:checkbox[name='" + $box.attr("name") + "']";
+        $(group).prop("checked", false);
+        $box.prop("checked", true);
+      } else {
+        $box.prop("checked", false);
+      }
+    });
+  </script>
+</body>
+
 </html>

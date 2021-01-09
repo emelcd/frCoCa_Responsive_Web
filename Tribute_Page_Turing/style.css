@@ -173,3 +173,6 @@ hr {
   transition: 0s;
 }
 
+#processor-memo {
+  display: grid;
+  }
