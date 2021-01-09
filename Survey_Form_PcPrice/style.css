@@ -1,39 +1,102 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
 
 :root {
-    --bg-color: #e8eae3 ;
-    --fo-color: #373833 ;
-    --re-color: #fa2742 ;
-
+  --bg-color: #e8eae3;
+  --fo-color: #373833;
+  --re-color: #fa2742;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Poppins, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  transition: 1s;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--fo-color);
+  background-color: var(--bg-color);
+  color: var(--fo-color);
 }
-
+#title {
+  color: var(--re-color);
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  box-shadow: lightcoral;
+}
+main {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  /* padding: 2rem; */
+  background-color: #ced4da;
+  margin: 10% 10% 15% 10%;
+  border-radius: 2rem;
+}
+p {
+  text-align: center;
+}
 .form-control {
-    display: block;
-    width: 80%;
-    height: 2rem;
-    padding: 0.375rem 0.75rem;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: 0.25rem;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-label {
-    text-align: center
+  display: block;
+  margin: auto;
+  width: 50%;
+  height: 1rem;
+  padding: 0.375rem 0.75rem;
+  color: #000000;
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 25rem;
+
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-#survey-form {
-    margin-left: 10vw;
+
+/* #survey-form {
+    margin-left: 10%;
+} */
+
+.submit-button {
+  font-size: larger;
+  text-align: center;
+  background-color: var(--re-color);
+  padding: 7px 20px;
+  border-radius: 10%;
+  margin-bottom: 1rem;
+  transition: 2s;
+}
+
+.submit-button:hover {
+  color: #ced4da;
+}
+
+
+
+textarea {
+  resize: none;
+  scrollbar-color: var(--fo-color);
+  margin-top: 1rem;
+}
+
+.form-group {
+  margin: 0 10% 1.25rem auto;
+  padding: 0.25rem;
+}
+
+#check {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  margin: 0 1rem 0 1rem;
+  
+}
+
+.clue {
+  font-style: oblique;
+  font-size: xx-small;
+  color: var(--re-color);
+}
+
+#most-like {
+  height: 2rem;
 }
