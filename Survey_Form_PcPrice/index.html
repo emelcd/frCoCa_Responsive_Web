@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body class="bg">
-    <h1 id="title">Probando</h1>
-    <p id="description"></p>
-    <div id="wrapper">
-        <form id="survey-form">
-            <label for="name" id="name-label">Name</label>
-            <input type="text" id="name" placeholder="Name">
-            <button type="submit">SUmb</button>
-        </form>
-    </div>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pc Seller</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="main">
+      <header class="header">
+        <h1 id="title">Pc Seller</h1>
+        <p id="description">Rate your PC and get the highest price for it</p>
+      </header>
+      <form action="" id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue" style="color: var(--re-color); font-size: x-small;">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="1"
+            max="15"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+            <p>
+              What is your favorite feature of freeCodeCamp?
+            </p>
+            <select id="most-like" name="mostLike" class="form-control" required>
+              <option disabled selected value>Select an option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projects">Projects</option>
+              <option value="community">Community</option>
+              <option value="openSource">Open Source</option>
+            </select>
+          </div>
+        <div class="form-group">
+            <button type="submit" id="submit" class="submit-button">
+              Submit
+            </button>
+      </form>
+    </main>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </body>
 </html>
