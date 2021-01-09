@@ -1,4 +1,6 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 /* General Rules */
 :root {
 
@@ -20,6 +22,7 @@
   transition: .2s;
 }
 
+
 body {
   background-color: var(--sh5-color);
   color: var(--sh5-color);
@@ -27,14 +30,16 @@ body {
 }
 main {
   margin: 2em auto;
-  width: 750px;
+
+  width: 70%;
   text-align: center;
   /* padding: 2rem; */
   background-color: var(--sh1-color);
   /* border: 2rem solid var(--sh2-color); */
   border-radius: 2rem;
   display: grid;
-  
+  box-shadow: 1rem 1rem 1rem 1rem rgba(0,0,0,0.6);
+
 }
 p {
   text-align: center;
@@ -72,7 +77,19 @@ p {
   color: #ced4da;
 }
 
+footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+}
 
+h6{
+  color: var(--sh1-color);
+}
 
 textarea {
   resize: none;
@@ -107,7 +124,7 @@ hr {
 .clue {
   font-style: oblique;
   font-size: xx-small;
-  color: var(--r2-color);
+  color: var(--sh5-color);
 }
 
 #most-like {
@@ -135,12 +152,24 @@ input::-webkit-input-placeholder{
 
 
 .subtitle {
-  color: var(--r1-color);
+  color: var(--sh3-color);
   margin-top: 10px;
   
 }
 
-
+.plho-price {
+  position: relative;
+  display: inline-block;
+}
+.plho-price::after{
+  position: absolute;
+  right: 5px;
+  top: 1px;
+  content: attr(data-placeholder);
+  pointer-events: none;
+  opacity: 0.6;
+  
+}
 .subpart-1 {
   
   border-bottom: var(--big-border);
@@ -158,14 +187,15 @@ input::-webkit-input-placeholder{
 
 /* Id Selections */
 #title {
-  color: var(--sh1-color);
+  color: var(--sh5-color);
   text-align: center;
   font-size: 40px;
   font-weight: bold;
   background-color: var(--sh2-color);
   position: relative;
   border-radius: 2rem;
-  
+  font-family: 'Yusei Magic', sans-serif;
+  /* box-shadow: 1rem 1rem 1rem 1rem rgba(0,0,0,0.6); */
 }
 
 
