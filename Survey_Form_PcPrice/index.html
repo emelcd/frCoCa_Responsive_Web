@@ -11,11 +11,14 @@
 <body>
   <main id="main">
     <header class="header">
-      <h1 id="title">Pc Seller</h1>
+      <h1 id="title">Pc Seller 💻 </h1>
       <p id="description">Rate your PC and get the highest price for it</p>
       <hr>
     </header>
     <form action="" id="survey-form">
+      
+
+
       <section class="subpart-1">
         <h4 class="subtitle span">
           Brand of the PC?<br>
@@ -23,7 +26,7 @@
         </h4>
         <div id="check" class="form-group">
   
-          <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />Asus</label>
+          <label><input name="prefer" value="Asus" type="checkbox" class="input-checkbox" />Asus</label>
           <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Acer</label>
           <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Apple</label>
           <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Dell</label>
@@ -38,56 +41,83 @@
         </div>
 
       </section>
+
       <section class="subpart-2">
 
-        <div id="type-age" class="form-group">
-          <label id="number-label" for="number" class="subtitle " >Orginal Price</label>
-          <input id="number-input" type="number" name="price" id="number" min="0" max="2500" step="100" class="form-control" 
-            placeholder="€?" required/>
+        <div >
+          
           <h4 class="subtitle">
-            state?
+            Kind of Computer?
           </h4>
-          <select id="most-like" name="mostLike" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="openSource">Open Source</option>
+          <select name="mostKind" class="form-control" required>
+            <option disabled selected value>Kind</option>
+            <option value="challenges">Laptop</option>
+            <option value="projects">Pc</option>
+            <option value="community">Mini</option>
+            <option value="openSource">Server</option>
           </select>
   
           <h4 class="subtitle">
-            Kind of computer?
+            State of Computer?
           </h4>
           <select id="most-like" name="mostLike" class="form-control" required>
-            <option disabled selected value>Select an option</option>
-            <option value="challenges">Challenges</option>
-            <option value="projects">Projects</option>
-            <option value="community">Community</option>
-            <option value="openSource">Open Source</option>
+            <option disabled selected value>State</option>
+            <option value="challenges">Perfect</option>
+            <option value="projects">Great</option>
+            <option value="community">Bad</option>
+            <option value="openSource">Very Poor</option>
           </select>
+          <div class="form-group">
+            <h4  class="subtitle">Original Price</h4>
+            <label id="number-label"></label>
+            <input type="number" name="number" id="number" min="0" max="2500" step="100" class="form-control" placeholder="€?" required/>
+
+          </div>
       </section>
-      </div>
-      <div class="form-group">
-      </div>
 
-      <div id="contact" class="form-group">
-        <label id="name-label" for="name">Name</label>
-        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
-        <label id="email-label" for="email">Email</label>
-        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
-        <p>Any comments or suggestions?</p>
-        <textarea id="comments" class="input-textarea" name="comment"
-          placeholder="Enter your comment here..."></textarea>
-      </div>
-      </div>
+      <section class="subpart-3">
+        <div class="form-group">
 
-      <div class="form-button">
+          <h4 class="subtitle">Brand Processor</h4>
+          
+          <select name="subject" id="subject" class="form-control">
+            <option value="" selected="selected">Select subjet</option>
+          </select>
+          <h4 class="subtitle">Generation Processor</h4>
+          <select name="topic" id="topic" class="form-control">
+            <option value="" selected="selected">Please select subject first</option>
+          </select>
+         
+          <h4 class="subtitle">Graphic Generation</h4>
+          <select name="chapter" id="chapter" class="form-control">
+          <option value="" selected="selected">Please select topic first</option>
+        </select>
+       
+        </div>
+      </section>
+
+      <section class="subpart-4">
+        <div id="contact" class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+          <p>Any comments or suggestions?</p>
+          <textarea id="comments" class="input-textarea" name="comment"
+            placeholder="Enter your comment here..."></textarea>
+        </div>
+        
+        
+      </section>
+      
+    <div class="form-button">
         <button type="submit" id="submit" class="submit-button">
           Submit
         </button>
-      </div>
+    </div>
+    
     </form>
- 
+    
   </main>
   <footer>
     <h6>
@@ -96,7 +126,7 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="main.js"></script>
-  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <script>
     $("input:checkbox").on('click', function () {
       var $box = $(this);
