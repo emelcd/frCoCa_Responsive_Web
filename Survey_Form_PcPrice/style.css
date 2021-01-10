@@ -30,7 +30,6 @@ body {
 }
 main {
   margin: 2em auto;
-  min-width: 50&;
   width: 66%;
   text-align: center;
   /* padding: 2rem; */
@@ -113,15 +112,14 @@ textarea {
 
 
 #check {
-  text-align: justify;
+  text-align: left;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   margin: 0 2rem 0 2rem;
   padding: 0.250rem;
-  /* border-left: var(--sma-border);
-  border-right: var(--sma-border); */
+
   border-top: var(--big-border) ;
-  min-width: 35vw;
+  min-width: 20vw;
 
   
 }

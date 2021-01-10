@@ -14,6 +14,7 @@ $("input:checkbox").on('click', function () {
 
 
 
+
 // Options for dropdowns
 var objGraphics = ["nVidia +2Gb","nVidia -2Gb", "AMD +2Gb", "AMD -2Gb"]
 var subjectObject = {
@@ -32,24 +33,24 @@ var subjectObject = {
 // Conditional DropDown
   window.onload = function() {
     // Getting Value Field and stablishing onchange
-    var subjectSel = document.getElementById("brand");
-    var topicSel = document.getElementById("gene");
-    var chapterSel = document.getElementById("memo");
+    var brandSel = document.getElementById("brand");
+    var geneSel = document.getElementById("gene");
+    var memoSel = document.getElementById("memo");
     for (var x in subjectObject) {
-      subjectSel.options[subjectSel.options.length] = new Option(x, x);
+      brandSel.options[brandSel.options.length] = new Option(x, x);
     }
-    subjectSel.onchange = function() {
-      chapterSel.length = 1;
-      topicSel.length = 1;
+    brandSel.onchange = function() {
+      memoSel.length = 1;
+      geneSel.length = 1;
       for (var y in subjectObject[this.value]) {
-        topicSel.options[topicSel.options.length] = new Option(y, y);
+        geneSel.options[geneSel.options.length] = new Option(y, y);
       }
     }
-    topicSel.onchange = function() {
-      chapterSel.length = 1;
-      var z = subjectObject[subjectSel.value][this.value];
+    geneSel.onchange = function() {
+      memoSel.length = 1;
+      var z = subjectObject[brandSel.value][this.value];
       for (var i = 0; i < z.length; i++) {
-        chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+        memoSel.options[memoSel.options.length] = new Option(z[i], z[i]);
       }
     }
   }
