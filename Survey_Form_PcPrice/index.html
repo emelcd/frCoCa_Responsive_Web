@@ -11,13 +11,65 @@
 <body>
   <main id="main">
     <header class="header">
-      <h1 id="title">Pc Seller 💻 </h1>
+      <h1 id="title">pc_SellerForm 💻 </h1>
       <p id="description">Rate your PC and get the highest price for it</p>
       <hr>
     </header>
     <form action="" id="survey-form">
-      
+      <div class="contact">
+      <div id="data-send" class="form-group">
+          
+            <label id="name-label" for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Enter your name"
+              required
+            />
+            <label id="email-label" for="email">Email</label>
+            <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+            />
+            <label id="number-label" for="number"
+            >How much u want?<span class="clue">(optional)</span></label
+            >
+            <input
+            type="number"
+            name="money-back"
+            id="number"
+            min="0"
+            max="3000"
+            class="form-control"
+            placeholder="In € please"
+            />
+            
+            <label id="want-label" for="number"
+            >Want a Change?</label
+            >
+            <select id="dropdown" name="role" class="form-control" required>
+              <option disabled selected value></option>
+              <option value="student">Yes!</option>
+              <option value="job">No!</option>
+              <option value="learner">Don't Know...</option>
 
+            </select>
+            <textarea name="comment" id="comment-label"  placeholder="Something more?"></textarea>
+            <div class="form-button">
+              <button type="submit" id="submit" class="submit-button" >
+                Get Your Price
+              </button>
+
+          </div>
+        </div>
+
+      </div>
 
       <section class="subpart-1">
         <h4 class="subtitle span">
@@ -50,7 +102,7 @@
             Kind of Computer?
           </h4>
           <select name="mostKind" class="form-control" required>
-            <option disabled selected value>Kind</option>
+            <option disabled selected value></option>
             <option value="challenges">Laptop</option>
             <option value="projects">Pc</option>
             <option value="community">Mini</option>
@@ -61,7 +113,7 @@
             State of Computer?
           </h4>
           <select id="most-like" name="mostLike" class="form-control" required>
-            <option disabled selected value>State</option>
+            <option disabled selected value></option>
             <option value="challenges">Perfect</option>
             <option value="projects">Great</option>
             <option value="community">Bad</option>
@@ -80,41 +132,67 @@
 
           <h4 class="subtitle">Brand Processor</h4>
           
-          <select name="subject" id="subject" class="form-control">
-            <option value="" selected="selected">Select subjet</option>
+          <select name="brand-processor" id="brand" class="form-control">
+            <option value="" selected="selected">Amd/Intel</option>
           </select>
           <h4 class="subtitle">Generation Processor</h4>
-          <select name="topic" id="topic" class="form-control">
-            <option value="" selected="selected">Please select subject first</option>
+          <select name="generation-process" id="gene" class="form-control">
+            <option value="" selected="selected">Select A Brand</option>
           </select>
          
-          <h4 class="subtitle">Graphic Generation</h4>
-          <select name="chapter" id="chapter" class="form-control">
-          <option value="" selected="selected">Please select topic first</option>
+          <h4 class="subtitle">Graphic Brand/Memory</h4>
+          <select name="graphic-memo" id="memo" class="form-control">
+          <option value="" selected="selected">Select a graphic</option>
         </select>
        
         </div>
       </section>
 
       <section class="subpart-4">
-        <div id="contact" class="form-group">
-          <label id="name-label" for="name">Name</label>
-          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
-          <label id="email-label" for="email">Email</label>
-          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
-          <p>Any comments or suggestions?</p>
-          <textarea id="comments" class="input-textarea" name="comment"
-            placeholder="Enter your comment here..."></textarea>
+
+        <div id="memory" class="form-group">
+          <p>Ram Memory?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />2Gb</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />4Gb</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />6Gb</label
+          >
+    
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />8Gb/More</label
+          >
+          
         </div>
         
         
       </section>
+
       
-    <div class="form-button">
-        <button type="submit" id="submit" class="submit-button">
-          Submit
-        </button>
-    </div>
     
     </form>
     
@@ -128,16 +206,7 @@
   <script src="main.js"></script>
   <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   <script>
-    $("input:checkbox").on('click', function () {
-      var $box = $(this);
-      if ($box.is(":checked")) {
-        var group = "input:checkbox[name='" + $box.attr("name") + "']";
-        $(group).prop("checked", false);
-        $box.prop("checked", true);
-      } else {
-        $box.prop("checked", false);
-      }
-    });
+
   </script>
 </body>
 
