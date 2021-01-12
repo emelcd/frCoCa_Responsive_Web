@@ -9,16 +9,16 @@
 <body>
     <header id="header">
         <div id="header-logo">
-            <img src="guitarra.png" alt="guitar_logo" id="logo-img">
+            <img src="guitarra.png" alt="guitar_logo" id="header-img">
+            <h2 id="title">Ai Generator</h2>
+            <nav id="nav-bar">
+                <ul>
+                    <li> <a class="nav-link" href="#container-list">Info</a> </li>
+                    <li> <a class="nav-link" href="#container-list">Product List</a></li>
+                    <li> <a class="nav-link" href="#container-about">About</a> </li>
+                </ul>
+            </nav>
         </div>
-        <h2 id="title">Ai Generator</h2>
-        <nav id="nav-bar">
-            <ul>
-                <li class="nav-link">Info</li>
-                <li class="nav-link">Product List</li>
-                <li class="nav-link">About</li>
-            </ul>
-        </nav>
     </header>
     <div id="container-nav">
         
@@ -26,12 +26,20 @@
     <main id="main">
         <div id="container-info">
             <h1>Info of the Song</h1>
-            <h2>Name</h2>
+            <h3>Name</h3>
+            <h4 id="name-song">Panamanian Whole Wide World, The</h4>
             <div id="vid-info">
-                <iframe id="video" width="80%"  src="https://www.youtube.com/embed/mfm3C6Ejq3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Video
 
+                </h4>
+                <iframe id="video" src="https://www.youtube.com/embed/mfm3C6Ejq3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
+            <h3>Letter</h3>
+            <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolorum veritatis, fugiat repellendus omnis ut dolor ipsa, laboriosam perferendis eius, explicabo sint at cum ipsam quisquam id quae! Nisi unde assumenda natus. Ipsa similique blanditiis consequuntur quibusdam nobis dolorum. Ratione esse, natus sed quaerat, eveniet exercitationem neque veritatis recusandae cupiditate facilis officiis corrupti dignissimos eaque consequatur, reiciendis inventore accusamus cum est provident eius obcaecati sit officia sapiente? Aspernatur, alias officiis? Perspiciatis, exercitationem doloribus? Tempore minus atque nemo aspernatur incidunt rerum excepturi distinctio culpa! Iste, voluptas! Perferendis obcaecati iste, vero id excepturi a quisquam nulla maxime voluptatibus, cum totam harum natus.</h5>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" type="email" name="email" id="email" placeholder="Join the NewsLetter" required>
+                <input id="submit" type="submit" value="Submit">
+            </form>
         </div>
         <div id="container-list">
             <h1>LIST</h1>
@@ -42,6 +50,6 @@
 
     </main>
     
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
