@@ -13,6 +13,11 @@
 
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
 #header {
     /* display: inline-flex; */
     position: absolute;
@@ -78,20 +83,28 @@ nav#nav-bar li {
 
 #main {
     display: grid;
-    grid-template-areas: "info list"
-                         "info list"   
-                         "about list"   ;
-                            ;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "a b b"
+    "a b b"
+    "c b b"
+    ;
+
+
 
 }
 
 #container-info {
-    grid-area: info;
+    grid-area: a;
+    background-color: var(--gr3-color);
+    border-radius: 3%;
+    font-family: ;
 }
 
 #container-list {
-    grid-area: list;
+    grid-area: b;
+
 }
 #container-about {
-    grid-area: about;
+    grid-area: c ;
 }
