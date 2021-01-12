@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Yusei+Magic&display=swap');
+:root{
+    --gr1-color: #000000; 	
+	--gr2-color: #7b7d7b; 	
+	--gr3-color: #969696; 	
+	--gr4-color: #bfbfbf; 	
+	--gr5-color: #ffffff; 	
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+
+}
+
+#header {
+    /* display: inline-flex; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-image: url(./pattern.jpg); */
+    font-family: 'Roboto', sans-serif;
+    color: var(--gr1-color);
+    background-color: var(--gr3-color);
+    /* justify-content: flex-end; */
+    
+}
+
+
+
+#logo-img {
+    width: 44px;
+    color: var(--gr5-color);
+}
+/* li {
+    display: inline;
+} */
+
+#title {
+    margin-left: 2vw;
+    color: var(--gr5-color);
+    font-size: xx-large;
+    font-family: 'Yusei Magic', sans-serif;
+
+
+}
+
+#email {
+    background-color: var(--gr5-color);
+}
+
+
+nav#nav-bar ul {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    font-size: x-large;
+    margin-right: 2vw;
+    
+} 
+
+nav#nav-bar li {
+    display: inline;
+    padding: 2vw;
+    color: var(--gr4-color);
+    
+}
+
+#container-nav {
+    height: 18vh;
+    background-color: var(--gr2-color);
+}
+.container {
+    background-color: var(--gr4-color);
+    height: 20vh;
+}
+
+#main {
+    display: grid;
+    grid-template-areas: "info list"
+                         "info list"   
+                         "about list"   ;
+                            ;
+
+}
+
+#container-info {
+    grid-area: info;
+}
+
+#container-list {
+    grid-area: list;
+}
+#container-about {
+    grid-area: about;
+}
