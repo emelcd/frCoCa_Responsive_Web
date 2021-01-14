@@ -13,7 +13,7 @@
     margin: 0%;
     padding: 0%;
     transition: .2s;
-    overflow: visible;
+    overflow: auto;
 
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 #header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -38,12 +38,17 @@ body {
     justify-content: space-around;
     align-items: flex-end;
     height: 10vh;
+    z-index: 2;
     
 }
 #header-txt {
     text-align: center;
 }
 
+#email {
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
 
 
 #header-logo {
@@ -74,6 +79,7 @@ body {
 #email {
     background-color: var(--gr5-color);
 }
+
 
 
 
@@ -129,6 +135,21 @@ p{
     width: 80%;
     height: 80%;
     background-color: var(--gr3-color);
+}
+.container-email{
+    height: 20vh;
+    background-color: var(--gr2-color);
+    margin-bottom: 2vh;
+    padding-top: 1rem;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gr3-color);
+    text-align: center;
+    margin: 0 20vw 0 20vw;
 }
 
 #product-section {
