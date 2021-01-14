@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Store</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Store</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        
 </head>
 <body>
+    <main id="main">
     <header id="header">
         <div id="header-logo">
             <img src="guitarra.png" alt="guitar_logo" id="header-img">
             <h2 id="title">Music Store</h2>
             <nav id="nav-bar">
                 <ul>
-                    <li> <a class="nav-link" href="#container-list"> <i class="fas fa-info"></i> Info</a> </li>
-                    <li> <a class="nav-link" href="#container-list"> <i class="fas fa-shopping-cart"></i> Product List</a></li>
-                    <li> <a class="nav-link" href="#container-about"> <i class="fas fa-address-card"></i> About</a> </li>
+                    <li> <a class="nav-link" href="#video-section"> <i class="fas fa-info"></i> Info</a> </li>
+                    <li> <a class="nav-link" href="#product-section"> <i class="fas fa-shopping-cart"></i> Product List</a></li>
+                    <li> <a class="nav-link" href="#email-section"> <i class="fas fa-address-card"></i> Email</a> </li>
                 </ul>
             </nav>
         </div>
@@ -34,12 +35,15 @@
             <h3 id="title-products">Product List</h3>
             <div class="container-products">
                 <div class="product">
-
+                    <div id="product-img">
+                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.agenciatelling.com%2Fwp-content%2Fuploads%2F2018%2F02%2Fmejores-portadas-discos-rock-01.jpg&f=1&nofb=1" alt="">
+                    </div>                    
+                    <p id="description-product">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio inventore atque voluptatibus sint ea, doloremque, dolorum maxime magnam incidunt sit doloribus!</p>
                 </div>
                 <nav id="nav-products">
-                    <button>LEFT</button>
-                    <button>CENTER</button>
-                    <button>RIGHT</button>
+                    <button><i class="fas fa-window-minimize"></i></button>
+                    <button><i class="fas fa-window-minimize"></i></button>
+                    <button><i class="fas fa-window-minimize"></i></button>
                 </nav>
                 <div id="product-info">
                     <h3>info</h3>
@@ -53,19 +57,16 @@
                 <form action="" id="form">
 
                     <input type="email" name="email" id="email" placeholder="Suscribe-And-Get-DissCounts">
-                    
                     <p>L amet consectetur adipisicing elit. Voluptas beatae unde recusandae distinctio illum reiciendis minima maxime tempora consectetur voluptatum.</p>
-                    <button type="submit" id="submit">GET DISSCOUNT</button>
+                    <input type="submit" value="Get Suscribe-And-Get-DissCounts" id="submit">
                 </form>
             </div>
         </section>
-    <main id="main">
         
 
     </main>
     
     <script src="./main.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <scrispt src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
