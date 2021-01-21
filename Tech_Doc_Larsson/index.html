@@ -1,61 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <meta name="color-scheme" content="dark light" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" /> <!-- Include library -->
+  <!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/default.min.css"> -->
+  <!-- Initialize highlight -->
 </head>
+
 <body>
-    <main id="main-doc">
-        <nav id="navbar">
-            <header id="header">
+  <main id="main-doc">
+    <nav id="navbar">
+      <header id="header">
+        <ul>
+          <li>Type<span class="typed">Script</span>h</li>
+          <!-- <li style="margin-left: 1rem">TyHi</li> -->
+          <li><a class="nav-link" href="#variables">Variables</a></li>
+          <li><a class="nav-link" href="#interfaces">Interfaces</a></li>
+          <li><a class="nav-link" href="#function">Functions</a></li>
+          <li><a class="nav-link" href="#types">Types</a></li>
+          <li><a class="nav-link" href="#moreInfo">moreInfo</a></li>
+          <br>
+          <button onclick="tweakMenu()" class="hider" id="button-hide2"><i class="fa fa-adjust"></i></button>
 
-            </header>
-            </nav>
-        <section class="main-section" id="section1">
-            <header>subtitle1</header>
+        </ul>
+      </header>
+    </nav>
+    <div class="containter">
+      <h1>Type<span class="typed">Script</span> Hint</h1>
+      <hr>
+      <br>
+      <section class="main-section" id="variables">
+        <header>VARIABLES</header>
+        <h3>Formulation</h3>
 
-            <code>F = G(M1*M2)/r^2</code>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-        </section>
-        <section class="main-section" id="section2">
-            <header>subtitle1</header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <code>F = G(M1*M2)/r^2</code>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-        </section>
-        <section class="main-section" id="section3">
-            <header>subtitle1</header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <code>F = G(M1*M2)/r^2</code>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-        </section>
-        <section class="main-section" id="section4">
-            <header>subtitle1</header>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <code>F = G(M1*M2)/r^2</code>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-            <code>F = G(M1*M2)/r^2</code>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quo.</p>
-        </section>
-        <section class="main-section" id="section5">
-            <header>subtitle1</header>
-            <ul>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-                <li>A</li>
-           </ul>
-        </section>
+        <pre><code class="typescript">//Simple Declaration Typed
+var ecoText: string = "ECO";</code></pre>
+        <h3>Type of Formulations</h3>
+        <pre><code class="typescript">//GENERATE A CLASS AND ASSIGN TO VARIABLE TYPED
+class Com {
+  numero: number;
+  letra: string;
+  constructor(numero:number; letra:string) {
+    this.numero = numero;
+    this.letra = letra;
+  }
+};
+var ecoObj: Com = new Com(1,"A");</code></pre>
+        <h3>Extension</h3>
+        <pre><code class="typescript">//Types of Declaration
+interface User {
+  name: string;
+  id: number;
+}
+const user: User = {
+  name: "Hayes",
+  id: 0,
+};
+/*¿? = {
+  string  : string,
+  number  : number,
+  boolean : boolean,
+  object  : object,
+  array   : type?number[],
+  custom  : class Custom;
+}*/
+type MyBool = true | false;
+type WindowStates = "open" | "closed" | "minimized";
+type LockStates = "locked" | "unlocked";
+type OddNumbersUnderTen = 1 | 3 | 5 | 7 | 9;
+//Unions provide a way to handle different types too.
+//For example, you may have a function that takes an array or a string:
+function getLength(obj: string | string[]) {
+  return obj.length;
+}
+</code></pre>
 
-    </main>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+      </section>
+      <section class="main-section" id="interfaces">
+        <header>Interfaces</header>
+        <h3>Initial Interfaces</h3>
+        <pre><code class="typescript">//Advanced Tweaks
+interface SquareConfig {
+  color?: string;
+  width?: number;
+}
+
+function createSquare(config: SquareConfig): { color: string; area: number } {
+  let newSquare = { color: "white", area: 100 };
+  if (config.color) {
+    newSquare.color = config.color;
+  }
+  if (config.width) {
+    newSquare.area = config.width * config.width;
+  }
+  return newSquare;
+}
+
+let mySquare = createSquare({ color: "black" });
+// Only READ
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+        </code></pre>
+        <h3>Describe Methods in an Interface</h3>
+        <pre><code class="typescript">//Using Interfaces and CLass
+interface ClockInterface {
+  currentTime: Date;
+  setTime(d: Date): void;
+}
+
+class Clock implements ClockInterface {
+  currentTime: Date = new Date();
+  setTime(d: Date) {
+    this.currentTime = d;
+  }
+  constructor(h: number, m: number) {}
+}
+        </code></pre>
+      </section>
+      <section class="main-section" id="function">
+        <header>Functions</header>
+        <h3>Named vs Anon</h3>
+        <pre><code class="typescript">// Named function
+function add(x, y) {
+  return x + y;
+}
+
+// Anonymous function
+let myAdd = function (x, y) {
+  return x + y;
+};
+        </code></pre>
+        <h3>Type The Functions</h3>
+        <pre><code class="typescript">//Secure The Inserts
+let myAdd: (baseValue: number, increment: number) => number = function (
+  x: number,
+  y: number
+): number {
+  return x + y;
+};
+
+        </code></pre>
+        <h3>Declaring Nulls</h3>
+        <pre><code class="typescript">
+function buildName(firstName: string, lastName?: string) {
+  if (lastName) return firstName + " " + lastName;
+  else return firstName;
+}
+
+let result1 = buildName("Bob"); // works correctly now
+let result2 = buildName("Bob", "Adams", "Sr."); // error, too many parameters
+Expected 1-2 arguments, but got 3.
+let result3 = buildName("Bob", "Adams"); // ah, just right
+        </code></pre>
+      </section>
+      <section class="main-section" id="types">
+        <header>Types</header>
+        <h3>String Literal T</h3>
+        <pre><code class="typescript">//Validating String
+type Easing = "ease-in" | "ease-out" | "ease-in-out";
+
+class UIElement {
+  animate(dx: number, dy: number, easing: Easing) {
+    if (easing === "ease-in") {
+      // ...
+    } else if (easing === "ease-out") {
+    } else if (easing === "ease-in-out") {
+    } else {
+      // It's possible that someone could reach this
+      // by ignoring your types though.
+    }
+  }
+}
+
+let button = new UIElement();
+button.animate(0, 0, "ease-in");
+button.animate(0, 0, "uneasy");
+//Argument of type '"uneasy"' is not assignable to parameter of type 'Easing'.</code></pre>
+        <h3>Numeric Literal T</h3>
+        <pre><code class="typescript">/Validatin Numeric
+function rollDice(): 1 | 2 | 3 | 4 | 5 | 6 {
+  return (Math.floor(Math.random() * 6) + 1) as 1 | 2 | 3 | 4 | 5 | 6;
+}
+//Common Case
+const result = rollDice();
+interface MapConfig {
+  lng: number;
+  lat: number;
+  tileSize: 8 | 16 | 32;
+}
+
+setupMap({ lng: -73.935242, lat: 40.73061, tileSize: 16 });</code></pre>
+        <h3>Bool Literal T</h3>
+        <pre><code class="typescript">//Validating Bool
+interface ValidationSuccess {
+  isValid: true;
+  reason: null;
+}
+
+interface ValidationFailure {
+  isValid: false;
+  reason: string;
+}
+
+type ValidationResult = ValidationSuccess | ValidationFailure;</code></pre>
+
+      </section>
+      <section class="main-section" id="moreInfo">
+        <header>moreInfo</header>
+        <ul id="pagesR">
+          <li><button id="0" class="pagesB" onclick="randomHint(this.id)">TypeScript HandBook</button></li>
+          <li><button id="1" class="pagesB" onclick="randomHint(this.id)">StackOverFlow</button></li>
+          <li><button id="2" class="pagesB" onclick="randomHint(this.id)">freeCodeCamp</button></li>
+          <li><button id="3" class="pagesB" onclick="randomHint(this.id)">medium.com</button></li>
+          <li><button id="4" class="pagesB" onclick="randomHint(this.id)">Others</button></li>
+
+        </ul>
+        <div id="boxCode">
+
+        </div>
+        <pre><code class="typescript" id="hideC">//Validating Bool
+  interface ValidationSuccess {
+  isValid: true;
+  reason: null;
+  }
+  
+  interface ValidationFailure {
+  isValid: false;
+  reason: string;
+  }
+  
+  type ValidationResult = ValidationSuccess | ValidationFailure;</code></pre>
+      </section>
+    </div>
+    <button onclick="tweakMenu()" class="hider" id="button-hide"><i class="fa fa-adjust"></i></button>
+
+  </main>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  <script src="script.js"></script>
 </body>
+
 </html>
