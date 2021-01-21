@@ -118,8 +118,8 @@ sendMail(to: string, subject: string, content: string)
       } 
   ); 
 }
-`,
-  testC: "var eco = 'MIERDA';"
+`
+
 
 }
 

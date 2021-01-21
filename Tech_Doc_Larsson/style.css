@@ -119,7 +119,7 @@ button {
 
 #main-doc {
   position: absolute;
-  margin-left: 22rem;
+  margin-left: 30vw;
   padding: 20px;
   margin-bottom: 110px;
   width: 66vw;
@@ -174,6 +174,10 @@ ul#pagesR li {
   margin: 10px;
   border-radius: 5px;
 }  */
+section p {
+  color: grey;
+  font-size: small;
+}
 
  @media only screen and (max-width: 815px) {
   #navbar ul {

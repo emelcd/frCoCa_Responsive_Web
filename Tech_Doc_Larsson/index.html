@@ -23,11 +23,11 @@
         <ul>
           <li>Type<span class="typed">Script</span>h</li>
           <!-- <li style="margin-left: 1rem">TyHi</li> -->
-          <li><a class="nav-link" href="#variables">Variables</a></li>
-          <li><a class="nav-link" href="#interfaces">Interfaces</a></li>
-          <li><a class="nav-link" href="#function">Functions</a></li>
-          <li><a class="nav-link" href="#types">Types</a></li>
-          <li><a class="nav-link" href="#moreInfo">moreInfo</a></li>
+          <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li><a class="nav-link" href="#Interfaces">Interfaces</a></li>
+          <li><a class="nav-link" href="#Functions">Functions</a></li>
+          <li><a class="nav-link" href="#Types">Types</a></li>
+          <li><a class="nav-link" href="#MoreInfo">MoreInfo</a></li>
           <br>
           <button onclick="tweakMenu()" class="hider" id="button-hide2"><i class="fa fa-adjust"></i></button>
 
@@ -38,30 +38,33 @@
       <h1>Type<span class="typed">Script</span> Hint</h1>
       <hr>
       <br>
-      <section class="main-section" id="variables">
-        <header>VARIABLES</header>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
         <h3>Formulation</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
 
         <pre><code class="typescript">//Simple Declaration Typed
 var ecoText: string = "ECO";</code></pre>
-        <h3>Type of Formulations</h3>
-        <pre><code class="typescript">//GENERATE A CLASS AND ASSIGN TO VARIABLE TYPED
-class Com {
-  numero: number;
-  letra: string;
-  constructor(numero:number; letra:string) {
-    this.numero = numero;
-    this.letra = letra;
-  }
-};
-var ecoObj: Com = new Com(1,"A");</code></pre>
-        <h3>Extension</h3>
-        <pre><code class="typescript">//Types of Declaration
-interface User {
-  name: string;
-  id: number;
-}
-const user: User = {
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi magni accusamus voluptatum fuga. Magnam consectetur ea inventore doloribus porro.</p>
+<h3>Type of Formulations</h3>
+<pre><code class="typescript">//GENERATE A CLASS AND ASSIGN TO VARIABLE TYPED
+  class Com {
+    numero: number;
+    letra: string;
+    constructor(numero:number; letra:string) {
+      this.numero = numero;
+      this.letra = letra;
+    }
+  };
+  var ecoObj: Com = new Com(1,"A");</code></pre>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur animi magni accusamus voluptatum fuga. Magnam consectetur ea inventore doloribus porro.</p>
+  <h3>Extension</h3>
+  <pre><code class="typescript">//Types of Declaration
+    interface User {
+      name: string;
+      id: number;
+    }
+    const user: User = {
   name: "Hayes",
   id: 0,
 };
@@ -85,8 +88,9 @@ function getLength(obj: string | string[]) {
 </code></pre>
 
       </section>
-      <section class="main-section" id="interfaces">
+      <section class="main-section" id="Interfaces">
         <header>Interfaces</header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quia quo repellat expedita debitis voluptates numquam dicta rem tenetur molestias tempora, aliquid illo ipsa? Hic incidunt sapiente quisquam, iste atque debitis minus neque tempora totam veniam! Adipisci quaerat sequi eligendi quas praesentium. Vitae, culpa nam itaque distinctio fugit eligendi voluptates.</p>
         <h3>Initial Interfaces</h3>
         <pre><code class="typescript">//Advanced Tweaks
 interface SquareConfig {
@@ -112,6 +116,7 @@ interface Point {
   readonly y: number;
 }
         </code></pre>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores excepturi vel adipisci officiis minus esse sequi provident distinctio nihil eligendi! Autem nostrum, tempora ea magni voluptatem labore expedita molestiae aut sint velit nulla veniam culpa dignissimos eveniet, earum debitis aliquid?</p>
         <h3>Describe Methods in an Interface</h3>
         <pre><code class="typescript">//Using Interfaces and CLass
 interface ClockInterface {
@@ -127,9 +132,12 @@ class Clock implements ClockInterface {
   constructor(h: number, m: number) {}
 }
         </code></pre>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores excepturi vel adipisci officiis minus esse sequi provident distinctio nihil eligendi! Autem nostrum, tempora ea magni voluptatem labore expedita molestiae aut sint velit nulla veniam culpa dignissimos eveniet, earum debitis aliquid?</p>
+
       </section>
-      <section class="main-section" id="function">
+      <section class="main-section" id="Functions">
         <header>Functions</header>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet maiores debitis explicabo? Ex nesciunt illo, corrupti reprehenderit aspernatur odio quaerat?</p>
         <h3>Named vs Anon</h3>
         <pre><code class="typescript">// Named function
 function add(x, y) {
@@ -163,9 +171,13 @@ let result2 = buildName("Bob", "Adams", "Sr."); // error, too many parameters
 Expected 1-2 arguments, but got 3.
 let result3 = buildName("Bob", "Adams"); // ah, just right
         </code></pre>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores excepturi vel adipisci officiis minus esse sequi provident distinctio nihil eligendi! Autem nostrum, tempora ea magni voluptatem labore expedita molestiae aut sint velit nulla veniam culpa dignissimos eveniet, earum debitis aliquid?</p>
+
       </section>
-      <section class="main-section" id="types">
+      
+      <section class="main-section" id="Types">
         <header>Types</header>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero cupiditate excepturi aut at voluptatum voluptate iusto aliquid ipsum. Pariatur iure similique eligendi inventore, labore blanditiis laborum delectus cupiditate nulla ratione soluta mollitia suscipit deleniti quis explicabo adipisci illum expedita nihil eum ad aut eveniet molestias.</p>
         <h3>String Literal T</h3>
         <pre><code class="typescript">//Validating String
 type Easing = "ease-in" | "ease-out" | "ease-in-out";
@@ -216,8 +228,10 @@ interface ValidationFailure {
 type ValidationResult = ValidationSuccess | ValidationFailure;</code></pre>
 
       </section>
-      <section class="main-section" id="moreInfo">
+      <section class="main-section" id="MoreInfo">
+
         <header>moreInfo</header>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, cupiditate!</p>
         <ul id="pagesR">
           <li><button id="0" class="pagesB" onclick="randomHint(this.id)">TypeScript HandBook</button></li>
           <li><button id="1" class="pagesB" onclick="randomHint(this.id)">StackOverFlow</button></li>
@@ -251,6 +265,7 @@ type ValidationResult = ValidationSuccess | ValidationFailure;</code></pre>
     hljs.initHighlightingOnLoad();
   </script>
   <script src="script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
