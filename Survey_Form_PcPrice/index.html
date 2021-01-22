@@ -17,54 +17,29 @@
     </header>
     <form action="" id="survey-form">
       <div class="contact">
-      <div id="data-send" class="form-group">
-          
-            <label id="name-label" for="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              class="form-control"
-              placeholder="Enter your name"
-              required
-            />
-            <label id="email-label" for="email">Email</label>
-            <input
-            type="email"
-            name="email"
-            id="email"
-            class="form-control"
-            placeholder="Enter your Email"
-            required
-            />
-            <label id="number-label" for="number"
-            >How much u want?<span class="clue">(optional)</span></label
-            >
-            <input
-            type="number"
-            name="money-back"
-            id="number"
-            min="0"
-            max="3000"
-            class="form-control"
-            placeholder="In € please"
-            />
-            
-            <label id="want-label" for="number"
-            >Want a Change?</label
-            >
-            <select id="dropdown" name="role" class="form-control" required>
-              <option disabled selected value></option>
-              <option value="student">Yes!</option>
-              <option value="job">No!</option>
-              <option value="learner">Don't Know...</option>
+        <div id="data-send" class="form-group">
 
-            </select>
-            <textarea name="comment" id="comment-label"  placeholder="Something more?"></textarea>
-            <div class="form-button">
-              <button type="submit" id="submit" class="submit-button" >
-                Get Your Price
-              </button>
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+          <label id="number-label" for="number">How much u want?<span class="clue">(optional)</span></label>
+          <input type="number" name="money-back" id="number" min="0" max="3000" class="form-control"
+            placeholder="In € please" />
+
+          <label id="want-label" for="number">Want a Change?</label>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value></option>
+            <option value="student">Yes!</option>
+            <option value="job">No!</option>
+            <option value="learner">Don't Know...</option>
+
+          </select>
+          <textarea name="comment" id="comment-label" placeholder="Something more?"></textarea>
+          <div class="form-button">
+            <button type="submit" id="submit" class="submit-button">
+              Get Your Price
+            </button>
 
           </div>
         </div>
@@ -77,13 +52,15 @@
           <span class="clue">(Just Select One)</span>
         </h4>
         <div id="check" class="form-group">
-  
+
           <label><input name="prefer" value="Asus" type="checkbox" class="input-checkbox" />Asus</label>
           <label><input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />Acer</label>
           <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox" />Apple</label>
           <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox" />Dell</label>
-          <label><input name="prefer" value="open-source-community" type="checkbox"class="input-checkbox" />Lenovo</label>
-          <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox" />Microsoft</label>
+          <label><input name="prefer" value="open-source-community" type="checkbox"
+              class="input-checkbox" />Lenovo</label>
+          <label><input name="prefer" value="gitter-help-rooms" type="checkbox"
+              class="input-checkbox" />Microsoft</label>
           <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox" />HP</label>
           <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox" />LG</label>
           <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox" />Samsung</label>
@@ -96,8 +73,8 @@
 
       <section class="subpart-2">
 
-        <div >
-          
+        <div>
+
           <h4 class="subtitle">
             Kind of Computer?
           </h4>
@@ -108,7 +85,7 @@
             <option value="community">Mini</option>
             <option value="openSource">Server</option>
           </select>
-  
+
           <h4 class="subtitle">
             State of Computer?
           </h4>
@@ -120,9 +97,10 @@
             <option value="openSource">Very Poor</option>
           </select>
           <div class="form-group">
-            <h4  class="subtitle">Original Price</h4>
+            <h4 class="subtitle">Original Price</h4>
             <label id="number-label"></label>
-            <input type="number" name="number" id="number" min="0" max="2500" step="100" class="form-control" placeholder="€?" required/>
+            <input type="number" name="number" id="number" min="0" max="2500" step="100" class="form-control"
+              placeholder="€?" required />
 
           </div>
       </section>
@@ -131,7 +109,7 @@
         <div class="form-group">
 
           <h4 class="subtitle">Brand Processor</h4>
-          
+
           <select name="brand-processor" id="brand" class="form-control">
             <option value="" selected="selected">Amd/Intel</option>
           </select>
@@ -139,12 +117,12 @@
           <select name="generation-process" id="gene" class="form-control">
             <option value="" selected="selected">Select A Brand</option>
           </select>
-         
+
           <h4 class="subtitle">Graphic Brand/Memory</h4>
           <select name="graphic-memo" id="memo" class="form-control">
-          <option value="" selected="selected">Select a graphic</option>
-        </select>
-       
+            <option value="" selected="selected">Select a graphic</option>
+          </select>
+
         </div>
       </section>
 
@@ -153,49 +131,23 @@
         <div id="memory" class="form-group">
           <p>Ram Memory?</p>
           <label>
-            <input
-              name="user-recommend"
-              value="definitely"
-              type="radio"
-              class="input-radio"
-              checked
-            />2Gb</label
-          >
+            <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />2Gb</label>
           <label>
-            <input
-              name="user-recommend"
-              value="maybe"
-              type="radio"
-              class="input-radio"
-            />4Gb</label
-          >
+            <input name="user-recommend" value="maybe" type="radio" class="input-radio" />4Gb</label>
           <label>
-            <input
-              name="user-recommend"
-              value="maybe"
-              type="radio"
-              class="input-radio"
-            />6Gb</label
-          >
-    
-          <label
-            ><input
-              name="user-recommend"
-              value="not-sure"
-              type="radio"
-              class="input-radio"
-            />8Gb/More</label
-          >
-          
+            <input name="user-recommend" value="maybe" type="radio" class="input-radio" />6Gb</label>
+
+          <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />8Gb/More</label>
+
         </div>
-        
-        
+
+
       </section>
 
-      
-    
+
+
     </form>
-    
+
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="main.js"></script>
