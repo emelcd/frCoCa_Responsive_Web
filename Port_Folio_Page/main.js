@@ -1,29 +1,31 @@
 var projects = {
     0:{
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
+        proName: "Product Landing",
+        proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
+        proLang: "javascript",
+        proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
+        proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
+
       },
     1:{
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
-      }
-
-}
-var personalData = {
-    0:{
-        firstName: "John",
-        lastName: "Doe",
-        age: 50,
-        eyeColor: "blue"
-      },
-    1: {
-        eco:"eco"
+        proName: "Product Landing",
+        proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
+        proLang: "javascript",
+        proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
+        proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
     }
+      
+
+
+};
+
+function createProjects(pro) {
+    // console.log(pro);
+    let i = 0;
+    Object.keys(pro).forEach(project => {
+        console.log(project.proName)
+    });
+    
 }
 
-var newproject = projects[0]["age"];
-console.log(newproject)
+createProjects(projects)
