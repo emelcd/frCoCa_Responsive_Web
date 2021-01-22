@@ -8,7 +8,7 @@ var projects = {
 
       },
     1:{
-        proName: "Product Landing",
+        proName: "Survey Form ",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: "javascript",
         proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
@@ -21,9 +21,18 @@ var projects = {
 
 function createProjects(pro) {
     // console.log(pro);
-    let i = 0;
     Object.keys(pro).forEach(project => {
-        console.log(project.proName)
+        // Aqui Iría lA QUERY DE JAVASCRIPT
+        let proName = pro[project].proName;     
+        let proDescription = pro[project].proDescription;  
+        let proLang = pro[project].proLang;     
+        let proLink = pro[project].proLink;     
+        let proImg = pro[project].proImg;  
+        console.log(proName);
+        console.log(proDescription); 
+        console.log(proLang);
+        console.log(proLink);
+        console.log(proImg); 
     });
     
 }
