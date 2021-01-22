@@ -3,16 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
 :root {
     --gr1-color: #000000; 	
-	--gr2-color: #7b7d7b; 	
-	--gr3-color: #969696; 	
-	--gr4-color: #bfbfbf; 	
-	--gr5-color: #ffffff; 	
+	--gr2-color: #F3ECE4; 	
+	--gr3-color: #F3ECE4; 	
+	--gr4-color: #F3ECE4; 	
+    --gr5-color: #eee; 
+    --ho-co:#FF9033;	
 }
+/* PLACEHOLDER  */
 
 * {
     margin: 0%;
     padding: 0%;
     transition: .2s;
+    font-size: xx-large;
     /* overflow: auto; */
 
 }
@@ -21,7 +24,6 @@ body {
     font-family: 'Poppins', sans-serif;
 
     background-color: var(--gr4-color);
-    font-size: larger;
     height: 100vh;
 
 }
@@ -46,12 +48,37 @@ body {
     text-align: center;
 }
 
-
+#pro-lis{
+    float: right;
+    font-size: 2px;
+    
+}
 
 #email {
+    line-height: 0.5rem;
     border-radius: 20px;
-    margin-bottom: 10px;
+    color: var(--gr1-color);
+    font-size: xx-small;
+    height: 1em;
+    padding: 0.125rem;
+    margin-top: 30px;
 }
+#email::placeholder {
+    margin-left: 10rem;
+}
+
+#submit {
+    font-size: x-small;
+    border: none;
+    margin-bottom: 30px;
+    width: 50%;
+    background-color: #F3ECE4;
+    
+}
+    
+
+
+
 
 
 #header-logo {
@@ -64,7 +91,7 @@ body {
 #header-img {
     height: 7vh;
     color: var(--gr5-color);
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(.2);
 
 }
 /* li {
@@ -78,11 +105,6 @@ body {
     font-size: xx-large;
     font-family: 'Proza Libre', sans-serif;
 }
-
-#email {
-    background-color: var(--gr5-color);
-}
-
 
 
 
@@ -100,17 +122,17 @@ nav#nav-bar ul {
 nav#nav-bar li {
     display: inline;
     padding: 2vw;
-    color: var(--gr5-colorolor);
+    color: var(--gr1-colorolor);
     text-decoration: none;
     
 }
 nav#nav-bar li a {
     text-decoration: none;
-    color: var(--gr4-color);
+    color: var(--gr1-color);
 }
 nav#nav-bar li a:hover {
     text-decoration: none;
-    color: var(--gr5-color);
+    color: var(--ho-co);
 }
 
 p{
@@ -123,12 +145,15 @@ p{
 .container-video {
     background-color: var(--gr2-color);
     height: 80vh;
+    width: 70vw;
+    max-width: 70vw;
+    margin: auto;
     text-align: center;
     overflow: auto;
 }
 .container-products {
     background-color: var(--gr2-color);
-    height: 80vh;
+    min-height: 40vh;
     text-align: center;
     padding-top: 1vh;
     overflow: auto;
@@ -141,28 +166,24 @@ p{
     height: 80%;
     background-color: var(--gr3-color);
 }
-.container-email{
-    height: 20vh;
-    overflow: auto;
-    background-color: var(--gr2-color);
-    margin-bottom: 5vh;
-    padding-top: 1rem;
-    align-items: center;
-    margin: 0 5vw 5vw 5vw;
-    float: right;
-    border-radius: 2%;
-}
+/* #email-section {
+    margin: auto;
+    font-size: xx-small;
+} */
+
 
 #form {
+    width: 30vw;
     display: flex;
     flex-direction: column;
     background-color: var(--gr3-color);
-    text-align: center;
-    margin: 0 20vw 0 20vw;
+    margin: auto;
 }
 
 #product-section {
     margin-top: 1rem;
+    max-width: 60vw;
+    margin: auto;
 }
 
 #text-video {
@@ -187,11 +208,22 @@ p{
     height: 80%;
     background-color: var(--gr5-color);
 }
+#product-info {
+    position: relative;
+    bottom:0;                   
+    height: 80%;
+    background-color: var(--gr4-color);
+}
 
-#img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
+#nav-products {
+    font-size: xx-small;
+}
+
+
+.img-1 {
+    width: 80%;
+    height: 80%;
+    object-fit: scale-down;
     transition: 1s;
 }
 
@@ -202,17 +234,42 @@ button {
     cursor:pointer;
     overflow: hidden;
     outline:none;
-    filter: brightness(0) invert(1);
-
-    font-size: xx-large;
+    /* filter: brightness(0) invert(1); */
+    font-size: small;
     
 }
+button:hover {
+    color: var(--ho-co);
+}
 
-@media (max-width: 600px) {
+#product-card {
+    width: 40vw;
+    margin: auto;
+    text-align: left;
+}
+#product-title {
+    font-size: small;
+    float: left;
+    color: var(--gr1-color);
+}
+#product-description {
+    font-size: xx-small;
+}
+#pro-item {
+    font-size: x-small;
+    float: right;
+}
+
+/* NAV */
+#nav-products{
+    text-align: center;
+}
+
+@media (max-width: 800px) {
     nav#nav-bar li a {
         text-decoration: none;
-        color: var(--gr4-color);
-        font-size: medium;
+        color: var(--gr1-color);
+        font-size: x-small;
     }
     #title {
         display: none;
@@ -220,7 +277,7 @@ button {
     #header-img {
         margin-left: 5vw;
         color: var(--gr5-color);
-        filter: brightness(0) invert(1);
+        /* filter: brightness(0) invert(1); */
         height: 8vh;
     
     }

@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Music Store</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 </head>
+
 <body>
     <main id="main">
-    <header id="header">
-        <div id="header-logo">
-            <img src="guitarra.png" alt="guitar_logo" id="header-img">
-            <h2 id="title">Music Store</h2>
-            <nav id="nav-bar">
-                <ul>
-                    <li> <a class="nav-link" href="#video-section"> <i class="fas fa-info"></i> Info</a> </li>
-                    <li> <a class="nav-link" href="#product-section"> <i class="fas fa-shopping-cart"></i> Product List</a></li>
-                    <li> <a class="nav-link" href="#email-section"> <i class="fas fa-address-card"></i> Email</a> </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <header id="header">
+            <div id="header-logo">
+                <img src="https://www.flaticon.com/svg/vstatic/svg/860/860314.svg?token=exp=1611290431~hmac=a48b2d4c0f873167a1c5c110082fb3ee" alt="guitar_logo" id="header-img">
+                <h2 id="title">Music Store</h2>
+                <nav id="nav-bar">
+                    <ul>
+                        <li> <a class="nav-link" href="#video-section"> <i class="fas fa-info"></i> Info</a> </li>
+                        <li> <a class="nav-link" href="#product-section"> <i class="fas fa-shopping-cart"></i> Product
+                                List</a></li>
+                        <li> <a class="nav-link" href="#email-section"> <i class="fas fa-address-card"></i> Email</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         <section id="video-section">
             <h3 id="text-video">Product Commercial</h3>
             <div class="container-video">
                 <p id="description-video">Descripción del video</p>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo, veritatis.</p>
-                <iframe id="video"  src="https://www.youtube.com/embed/CJN0rcifLDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe id="video" src="https://www.youtube.com/embed/CJN0rcifLDw" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </section>
         <section id="product-section">
+
             <h3 id="title-products">Product List</h3>
+            <nav id="nav-products">
+                <button class="selector" id="1" onclick="getProduct(procutObj1)"><i
+                        class="fas fa-angle-left"></i></button>
+                <button class="selector" id="2" onclick="getProduct(procutObj2)"><i
+                        class="fas fa-angle-down"></i></button>
+                <button class="selector" id="3" onclick="getProduct(procutObj3)"><i
+                        class="fas fa-angle-right"></i></button>
+            </nav>
             <div class="container-products">
                 <div class="product">
-                    <div id="product-img">
-                        <img id="img" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.agenciatelling.com%2Fwp-content%2Fuploads%2F2018%2F02%2Fmejores-portadas-discos-rock-01.jpg&f=1&nofb=1" alt="">
-                    </div>                    
-                    <p id="description-product">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio inventore atque voluptatibus sint ea, doloremque, dolorum maxime magnam incidunt sit doloribus!</p>
+                    <div id="product-info"></div>
+
                 </div>
-                <nav id="nav-products">
-                    <button><i class="fas fa-window-minimize"></i></button>
-                    <button><i class="fas fa-window-minimize"></i></button>
-                    <button><i class="fas fa-window-minimize"></i></button>
-                </nav>
-                <div id="product-info">
-                    <h3>info</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam at dolore sequi atque sit facilis, voluptatum quisquam non tenetur expedita deleniti itaque culpa! Voluptates iusto iure nisi quos in corporis!</p>
-                </div>
+
             </div>
-        </section> 
+        </section>
         <section id="email-section">
-            <h3>Email</h3>
             <div class="container-email">
-                <form action="https://www.freecodecamp.com/email-submit" id="form" >
+                <form action="https://www.freecodecamp.com/email-submit" id="form">
 
                     <input type="email" name="email" id="email" placeholder="Suscribe-And-Get-DissCounts" required>
-                    <p>L amet consectetur adipisicing elit. Voluptas beatae unde recusandae distinctio illum reiciendis minima maxime tempora consectetur voluptatum.</p>
-                    <input type="submit" value="Get Suscribe-And-Get-DissCounts" id="submit">
+                    <input type="submit" value="💶 Consigue Descuentos" id="submit">
                 </form>
             </div>
         </section>
-        
-
     </main>
-    
-    <script src="./main.js"></script>
+
+    <script src="main.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>
