@@ -9,6 +9,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
 /* WELCOME SECTION */
 #welcome-section {
@@ -17,13 +19,22 @@
 }
 /* PROJECT ITEM CLASSes */
 #projects {
-    align-items: center;
     padding: 2rem;
+    display: inline-flex;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    padding: 1rem;
     /* padding-block: 10rem; */
 }
+.project-wrapper {
+    align-items: center;
+    margin: auto;
+    padding: .1rem;
+}
 .project-item {
-    display: inline-block;
-    width: 20rem;
+    margin: auto;
+    width: 17.5rem;
     padding: 0.125rem;
     background-color: var(--col-hueso1);
     margin-top: 0.125rem;

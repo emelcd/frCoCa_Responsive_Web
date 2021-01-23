@@ -95,6 +95,7 @@ function createProjects(pro) {
         let proImg = pro[project].proImg;  
 
         projectDom.innerHTML += `
+        <div class="project-wrapper">
         <div class="project-item">
         <h4 class="project-item-name">${proName}</h4>
         <hr class="project-hr">
@@ -107,7 +108,7 @@ function createProjects(pro) {
         <div class="project-thumbnail-left">
         ${returnIconsLinks(projects[project])}
         </div>
-        </div></div>
+        </div></div></div>
         `
         // ${projects[project].proCodeP}
         // ${projects[project].proGit}
@@ -115,5 +116,7 @@ function createProjects(pro) {
     });
     
 }
+
+
 
 createProjects(projects)
