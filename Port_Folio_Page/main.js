@@ -9,15 +9,26 @@ var personal = {
             html5: 80,
             css3: 75,
             react: 60,
+            vue:40,
+            sass:70,
+            bootstrap:65
             // codepen: 25,
-            git: 30
+            // git: 30
             
         },
         backend: {
             py: 80,
             php:24,
-            node: 60
+            node: 60,
+            mongo: 70,
+            laravel: 60
 
+        },
+        other: {
+            git: 80,
+            codepen:70,
+            adbXD: 50,
+            adbPS: 60
         }
 
     }
@@ -69,15 +80,22 @@ var projects = {
 };
 
 var iconsLang = {
-    "html5": '<i style="color:#DD4B25" class="fab fa-html5"></i>',
-    "css3": '<i style="color:#06BAF3" class="fab fa-css3-alt"></i>',
-    "js": '<i style="color:#CEB42E"class="fab fa-js-square"></i>',
-    "py": '<i class="fab fa-python"></i>',
+    "html5": '<i class="devicon-html5-plain-wordmark colored"></i>',
+    "css3": '<i class="devicon-css3-plain-wordmark colored"></i>',
+    "js": '<i class="devicon-javascript-plain colored"></i>',
+    "py": '<i style="background: -webkit-linear-gradient(120deg, rgba(0,123,236,1) 50%, rgba(247,193,38,1) 50%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"class="fab fa-python"></i>',
     "codepen": '<i class="fab fa-codepen"></i>',
     "git": '<i class="fab fa-github"></i>',
-    "php": '<i class="fab fa-php"></i>',
-    "node": '<i class="fab fa-node"></i>',
-    "react": '<i class="fab fa-react"></i>'
+    "bootstrap":'<i class="devicon-bootstrap-plain-wordmark colored"></i>',
+    "sass":'<i class="devicon-sass-original colored"></i>',
+    "php": '<i style="color:#7377AD;"class="devicon-php-plain"></i>',
+    "vue":'<i style="color: #41B883;"class="devicon-vuejs-plain-wordmark"></i>',
+    "laravel":'<i class="devicon-laravel-plain-wordmark colored"></i>',
+    "node": '<i style="color:#8BBF3D;"class="fab fa-node"></i>',
+    "react": '<i style="color:#5ED3F3" class="fab fa-react"></i>',
+    "mongo": '<i style="color:#4FAC4C"class="devicon-mongodb-plain-wordmark"></i>',
+    "adbXD": '<i style="color:#F75EEE"class="devicon-xd-line"></i>',
+    "adbPS": '<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>'
 }
 
 // UTILITY
@@ -141,6 +159,7 @@ function returnSkillsBars(perSkill, string) {
 }
 returnSkillsBars(personal.skills.frontend, "frontend")
 returnSkillsBars(personal.skills.backend, "backend")
+returnSkillsBars(personal.skills.other, "other")
 // RETURN PRODUCTS)
 function createProjects(pro) {
     var projectDom = document.getElementById("projects");

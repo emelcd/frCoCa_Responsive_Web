@@ -18,18 +18,15 @@
 }
 
 #main {
-    width: 100%;
+    height: 100vh;
 }
 
-.fab {
-    height: fit-content;
-    margin-bottom: .125rem;
-}
 
 
 /* WELCOME SECTION */
 #welcome-section {
-    height: 100vh;
+    height: fit-content;
+    margin-bottom: 2rem;
     background-color: var(--col-hueso2);
 
 }
@@ -38,7 +35,8 @@
     width: 90%;
     height: 40%;
     text-align: center;
-    margin: 5.125rem auto;
+    padding-top: 10rem;
+    margin:  auto;
     background-color: var(--col-hueso1);
 
 }
@@ -63,39 +61,50 @@
     height: fit-content;
     top: 20%;
     /* height: m; */
-    float: left;
     margin: .250rem;
     ;
-
+    
 }
 #welcome-backend {
     background-color: white;
     position: relative;
     width: 40%;
-    height: fit-content;
     top: 20%;
     /* height: m; */
-    float: right;
+    height: fit-content;
     margin: .250rem;
     ;
 
 }
 
 #welcome-other {
-    background-color: white;
+    background-color: #ffffff;
     position: relative;
-    width: 7rem;
-    height: 4rem;
-    float: right;
-
+    width: 40%;
+    height: fit-content;
+    top: 20%;
+    height: fit-content;
+    margin: auto;
+}
+#wrapper-prog {
+    width: 90%;
+    display: inline;
+    flex-wrap: wrap;
+    
 }
 
 #welcome-wrapper i{
-    font-size: 2rem;
+    font-size: 250%;
 }
 
-.wrapper-prog {
+#wrapper-prog {
     width: 50;
+    padding: 2rem;
+    display: inline-flex;
+    margin: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1.250rem;
 
 }
 
