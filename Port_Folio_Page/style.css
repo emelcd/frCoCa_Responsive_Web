@@ -1,0 +1,61 @@
+/* ImpoRTS */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* INITIAL CONFIG */
+:root {
+    --col-hueso1: #C7C0B3;
+    --col-hueso2: #F0EDEB;
+    
+}
+
+/* PROJECT ITEM CLASSes */
+#projects {
+
+    padding: 2rem;
+    /* padding-block: 10rem; */
+}
+.project-item {
+    display: inline-block;
+    width: 20rem;
+    padding: 0.125rem;
+    background-color: var(--col-hueso1);
+    margin-top: 0.125rem;
+}
+.project-item-name {
+    position: relative;
+    margin-left: 1rem;
+    
+}
+.project-item-img {
+    position: relative;
+    width: 70%;
+    margin: 1rem;
+}
+.project-item-des {
+    position: relative;
+    text-align: right;
+    width: 60%;
+    margin: 0.125rem  0 0.250rem 1rem;
+
+}
+
+.project-thumbnail {
+    position: relative;
+    background-color: #8b4513;
+    width: 5rem;
+    height: fit-content;
+    float: right;
+    color: #272320;
+    padding: .125rem;
+    text-align: right;
+    overflow: hidden;
+    bottom: 1.5rem;
+    right: .250rem;
+
+}
+
+.project-footer {
+    position: relative;
+    width: 100%;
+    background-color: violet;
+    height: 100%;
+}
