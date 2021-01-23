@@ -12,10 +12,32 @@ var projects = {
     1:{
         proName: "Survey Form ",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
+        proLang: ["html5", "css3", "js"],
+        proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
+        proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
+    },
+    2:{
+        proName: "Tribute Page",
+        proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
+        proLang: ["html5", "css3"],
+        proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
+        proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
+    },
+    3:{
+        proName: "PortFolio Json",
+        proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
+        proLang: ["html5", "css3"],
+        proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
+        proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
+    },
+    4:{
+        proName: "Tech Documentation",
+        proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["html5", "css3"],
         proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
         proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
     }
+
 };
 
 var iconsLang = {
