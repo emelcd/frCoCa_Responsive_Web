@@ -1,9 +1,26 @@
 // Porfolio DATA
 var personal = {
-    name: "Mick López",
+    name: "Mick L",
     jobrole: "Junior Web Developer",
-    resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, "
-    // skills: {}
+    resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, ",
+    skills: {
+        frontend: {
+            js: 85,
+            html5: 80,
+            css3: 75,
+            react: 60,
+            // codepen: 25,
+            git: 30
+            
+        },
+        backend: {
+            py: 80,
+            php:24,
+            node: 60
+
+        }
+
+    }
 }
 var projects = {
 
@@ -52,12 +69,15 @@ var projects = {
 };
 
 var iconsLang = {
-    "html5": '<i class="fab fa-html5"></i>',
-    "css3": '<i class="fab fa-css3-alt"></i>',
-    "js": '<i class="fab fa-js-square"></i>',
+    "html5": '<i style="color:#DD4B25" class="fab fa-html5"></i>',
+    "css3": '<i style="color:#06BAF3" class="fab fa-css3-alt"></i>',
+    "js": '<i style="color:#CEB42E"class="fab fa-js-square"></i>',
     "py": '<i class="fab fa-python"></i>',
     "codepen": '<i class="fab fa-codepen"></i>',
-    "git": '<i class="fab fa-github"></i>'
+    "git": '<i class="fab fa-github"></i>',
+    "php": '<i class="fab fa-php"></i>',
+    "node": '<i class="fab fa-node"></i>',
+    "react": '<i class="fab fa-react"></i>'
 }
 
 // UTILITY
@@ -92,13 +112,35 @@ function returnPersonalData(per) {
 
     console.log(personalDomT)
     var personalDomT = document.getElementById("welcome-title");
-    personalDomT.innerHTML = `${per.name}<hr class="welcome-hr">`;
-
-    var personalDom = document.getElementById("welcome-wrapper");
-    personalDom.innerHTML += `
-    <h3 class='welcome-subtitle'>${per.jobrole}
+    personalDomT.innerHTML = `${per.name}<hr class="welcome-hr">
+    <p class='welcome-subtitle'>${per.jobrole}</>
     `;
 }
+
+// SKILSS BARS
+function returnSkillsBars(perSkill, string) {
+    var wrapperFrontEnd = document.getElementById(`welcome-${string}`);
+    wrapperFrontEnd.innerHTML += "<h3 style='margin-bottom: 5%'>"+`${string}`+"</h3>";
+    Object.keys(perSkill).forEach(skill => {
+        console.log(skill)
+        console.log(iconsLang[skill])
+        console.log(perSkill[skill])
+        wrapperFrontEnd.innerHTML += `
+        
+        <p data-value="${perSkill[skill]}">${iconsLang[skill]}</p>
+        <progress max="100" value="${perSkill[skill]}" class="html5">
+            
+            <div class="progress-bar">
+                <span style="width: 80%; color: black">${perSkill[skill]}%</span>
+            </div>
+        </progress>
+        `
+    })
+
+    
+}
+returnSkillsBars(personal.skills.frontend, "frontend")
+returnSkillsBars(personal.skills.backend, "backend")
 // RETURN PRODUCTS)
 function createProjects(pro) {
     var projectDom = document.getElementById("projects");
@@ -125,6 +167,8 @@ function createProjects(pro) {
         ${returnIconsLinks(projects[project])}
         </div>
         </div></div></div>
+   
+
         `
         // ${projects[project].proCodeP}
         // ${projects[project].proGit}

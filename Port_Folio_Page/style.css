@@ -17,6 +17,15 @@
 
 }
 
+#main {
+    width: 100%;
+}
+
+.fab {
+    height: fit-content;
+    margin-bottom: .125rem;
+}
+
 
 /* WELCOME SECTION */
 #welcome-section {
@@ -26,7 +35,7 @@
 }
 
 #welcome-wrapper {
-    width: 80%;
+    width: 90%;
     height: 40%;
     text-align: center;
     margin: 5.125rem auto;
@@ -35,7 +44,11 @@
 }
 
 #welcome-title {
-    font-size: 30px;
+    font-size: 80px;
+}
+
+.welcome-subtitle {
+    font-size: 20px;
 }
 
 .welcome-hr {
@@ -44,15 +57,31 @@
 }
 
 #welcome-frontend {
+    background-color: #ffffff;
+    position: relative;
+    width: 40%;
+    height: fit-content;
+    top: 20%;
+    /* height: m; */
+    float: left;
+    margin: .250rem;
+    ;
+
+}
+#welcome-backend {
     background-color: white;
     position: relative;
-    width: 7rem;
-    height: 4rem;
-    float: left;
+    width: 40%;
+    height: fit-content;
+    top: 20%;
+    /* height: m; */
+    float: right;
+    margin: .250rem;
+    ;
 
 }
 
-#welcome-oter {
+#welcome-other {
     background-color: white;
     position: relative;
     width: 7rem;
@@ -61,17 +90,12 @@
 
 }
 
-#welcome-backend {
-    background-color: white;
-    position: relative;
-    width: 7rem;
-    height: 4rem;
-    margin: auto;
-
+#welcome-wrapper i{
+    font-size: 2rem;
 }
 
 .wrapper-prog {
-    position: relative;
+    width: 50;
 
 }
 
@@ -79,26 +103,94 @@
     position: relative;
     width: 50%;
 } */
-.progress-skill {
-    -webkit-appearance: none;
+/* PROGRESS BAR */
+progress[value] {
+    /* Get rid of the default appearance */
+    appearance: none;
+
+    /* This unfortunately leaves a trail of border behind in Firefox and Opera. We can remove that by setting the border to none. */
+    border: none;
+
+    /* Add dimensions */
+    width: 80%;
+    height: 7px;
+
+    /* Although firefox doesn't provide any additional pseudo class to style the progress element container, any style applied here works on the container. */
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .5) inset;
+
+    /* Of all IE, only IE10 supports progress element that too partially. It only allows to change the background-color of the progress value using the 'color' attribute. */
+
+
+    position: relative;
+    margin: 0 0 1.5em;
 }
 
-.progress-skill::-webkit-progress-bar {
-    background-color: orange;
-    -webkit-animation: animate-stripes 5s linear infinite;
-    animation: animate-stripes 5s linear infinite;
+progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+
 }
 
-@-webkit-keyframes animate-stripes {
-    100% { background-position: -100px 0px; }
- }
- 
- @keyframes animate-stripes {
-    100% { background-position: -100px 0px; }
- }
+progress[value]::-webkit-progress-value:after {
+    /* Only webkit/blink browsers understand pseudo elements on pseudo classes. A rare phenomenon! */
+    content: '';
+    position: absolute;
 
--webkit-animation: animate-stripes 5s linear infinite;
-animation: animate-stripes 5s linear infinite;
+    width: 5px;
+    height: 5px;
+    top: 7px;
+    right: 7px;
+
+    background-color: rgb(253, 0, 0);
+    border-radius: 100%;
+}
+
+progress[value]::-moz-progress-bar {
+    /* Gradient background with Stripes */
+    background-image:
+
+        -moz-linear-gradient(left, rgb(255, 255, 255), #000000);
+
+    border-radius: 3px;
+
+    /* Firefox doesn't support CSS3 keyframe animations on progress element. Hence, we did not include animate-stripes in this code block */
+}
+
+p[data-value] {
+
+    position: relative;
+}
+
+/* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
+
+p[data-value]:after {
+    content: attr(data-value) '%';
+    position: absolute;
+    right: .725rem;
+}
+
+.html5::-webkit-progress-value {
+    /* Gradient background with Stripes */
+    background-image:
+
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -webkit-linear-gradient(left, rgb(221, 75, 37), rgb(221, 75, 37));
+}
+
+.php::-webkit-progress-value {
+    /* Gradient background with Stripes */
+    background-image:
+
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -webkit-linear-gradient(left, rgb(221, 75, 37), rgb(221, 75, 37));
+}
+
 
 /* PROJECT ITEM CLASSes */
 #projects {
@@ -123,7 +215,7 @@ animation: animate-stripes 5s linear infinite;
     width: 17.5rem;
     height: 20rem;
     padding: 0.125rem;
-    background-color: var(--col-hueso1);
+    background-color: #e9e9e9;
     margin-top: 0.125rem;
 }
 
@@ -152,7 +244,6 @@ animation: animate-stripes 5s linear infinite;
     width: fit-content;
     height: fit-content;
     float: right;
-    color: #272320;
     padding-right: 1rem;
     padding-top: .1rem;
     bottom: 1.5rem;

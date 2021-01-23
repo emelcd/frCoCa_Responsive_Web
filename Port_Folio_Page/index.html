@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PortFolio WebPage</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style2.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
 </head>
+
 
 <body>
     <main id="main">
@@ -19,16 +23,26 @@
         <section id="welcome-section">
             <div id="welcome-wrapper">
                 <h1 id="welcome-title"></h1>
+                <h3 id="welcome-subtitle"></h1>
                 <div id="welcome-frontend">
                     <div class="wrapper-prog">
                         
-                        <i class="fab fa-python"></i>
-                        <progress class="progress-skill" value=".3" ></progress>
+
                     </div>
                 </div>
-                <div id="welcome-oter"></div>
-                <div id="welcome-backend"></div>
-                
+                <!-- <div id="welcome-other"></div> -->
+                <div id="welcome-backend"></div> 
+                <!--
+Lets start with a single html5 progress element. Currently our progress bar is in the indeterminate state. Lets change the status by adding 'max' and 'value' attribute to our progress element.
+
+We are almost done styling a single progress bar, except adding fallback technique for browsers that do not support progress element. The idea is to simulate the visual styles of the progress bar using `div` and `span`.
+
+Note:- To imitate the older browsers and help us style the fallback technique, we wil temporarily comment-out the progress tag.
+-->
+
+
+
+<!-- <p>Article - <a href="https://css-tricks.com/html5-progress-element/">https://css-tricks.com/html5-progress-element/</a></p> -->
 
             </div>
         </section>
