@@ -1,6 +1,6 @@
 /* ImpoRTS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 /* INITIAL CONFIG */
 :root {
     --col-hueso1: #C7C0B3;
@@ -11,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fira Code', monospace;
     transition: .2s;
     /* overflow: hidden; */
 
