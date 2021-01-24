@@ -1,13 +1,33 @@
 // Porfolio DATA
 var personal = {
-    name: "Mick L",
+    name: "Mick",
     jobrole: "Junior Web Developer",
     resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, ",
     skills: {
-        frontend: {js: 85,html5: 80,css3: 75,react: 60,vue:40,sass:70,bootstrap:65},
-        backend: {py: 80,php:24,node: 60,mongo: 70,laravel: 60, mySQL: 20},
-        other: {git: 80,codepen:70,adbXD: 50,adbPS: 60}
+        frontend: {
+            js: 85,
+            html5: 80,
+            css3: 75,
+            react: 60,
+            vue: 40,
+            sass: 70,
+            bootstrap: 65
+        },
+        backend: {
+            py: 80,
+            php: 24,
+            node: 60,
+            mongo: 70,
+            laravel: 60,
+            mySQL: 20
+        },
+        other: {
+            git: 80,
+            codepen: 70,
+            adbXD: 50,
+            adbPS: 60
         }
+    }
 
 }
 
@@ -57,23 +77,23 @@ var projects = {
 };
 
 var iconsLang = {
-    "html5": '<i class="devicon-html5-plain-wordmark colored"></i>',
-    "css3": '<i class="devicon-css3-plain-wordmark colored"></i>',
-    "js": '<i class="devicon-javascript-plain colored"></i>',
-    "py": '<i style="background: -webkit-linear-gradient(120deg, rgba(0,123,236,1) 50%, rgba(247,193,38,1) 50%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"class="fab fa-python"></i>',
-    "codepen": '<i class="fab fa-codepen"></i>',
-    "git": '<i class="fab fa-github"></i>',
-    "bootstrap":'<i class="devicon-bootstrap-plain-wordmark colored"></i>',
-    "sass":'<i class="devicon-sass-original colored"></i>',
-    "php": '<i style="color:#7377AD;"class="devicon-php-plain"></i>',
-    "vue":'<i style="color: #41B883;"class="devicon-vuejs-plain-wordmark"></i>',
-    "laravel":'<i class="devicon-laravel-plain-wordmark colored"></i>',
-    "node": '<i style="color:#8BBF3D;"class="fab fa-node"></i>',
-    "react": '<i style="color:#5ED3F3" class="fab fa-react"></i>',
-    "mongo": '<i style="color:#4FAC4C"class="devicon-mongodb-plain-wordmark"></i>',
-    "adbXD": '<i style="color:#F75EEE"class="devicon-xd-line"></i>',
-    "adbPS": '<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>',
-    "mySQL": ' <i class="devicon-mysql-plain-wordmark colored"></i>'
+    "html5": ['<i class="devicon-html5-plain-wordmark colored"></i>', "#E54D26", "HTML5"],
+    "css3": ['<i class="devicon-css3-plain-wordmark colored"></i>', "#3D8FC6", "CSS3"],
+    "js": ['<i class="devicon-javascript-plain colored"></i>', "#F0DB4F", "JavaSscript"],
+    "py": ['<i style="background: -webkit-linear-gradient(120deg, rgba(0,123,236,1) 50%, rgba(247,193,38,1) 50%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"class="fab fa-python"></i>', "#F7C126", "Python"],
+    "codepen": ['<i class="fab fa-codepen"></i>', "#94B8DB", "CodePen"],
+    "git": ['<i class="fab fa-github"></i>', "#94B8DB", "GitHub"],
+    "bootstrap": ['<i class="devicon-bootstrap-plain-wordmark colored"></i>', "#59407F", "Bootstrap 4"],
+    "sass": ['<i class="devicon-sass-original colored"></i>', "#C96597", "Sass"],
+    "php": ['<i style="color:#7377AD;"class="devicon-php-plain"></i>', "#7377AD", "php"],
+    "vue": ['<i style="color: #41B883;"class="devicon-vuejs-plain-wordmark"></i>', "#41B883", "Vue.js"],
+    "laravel": ['<i class="devicon-laravel-plain-wordmark colored"></i>', "#FD4F31", "laravel"],
+    "node": ['<i style="color:#8BBF3D;"class="fab fa-node"></i>', "#8BBF3D", "Node.js"],
+    "react": ['<i style="color:#5ED3F3" class="fab fa-react"></i>', "#5ED3F3", "React.js"],
+    "mongo": ['<i style="color:#4FAC4C"class="devicon-mongodb-plain-wordmark"></i>', "#4FAC4C", "mongoDB"],
+    "adbXD": ['<i style="color:#F75EEE"class="devicon-xd-line"></i>', "#F75EEE", "adobeXD"],
+    "adbPS": ['<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>', "#2FA3F7", "AdobePS"],
+    "mySQL": [' <i class="devicon-mysql-plain-wordmark colored"></i>', "#DD8716", "mySQL"],
 }
 
 // UTILITY
@@ -82,7 +102,7 @@ function returnIconsLang(arrLang) {
 
     var mapedIcons = arrLang.map(lang => {
         // console.log(lang)
-        return iconsLang[lang];
+        return iconsLang[lang][0];
     })
     // console.log(mapedIcons)
     // console.log(mapedIcons)
@@ -106,9 +126,9 @@ function returnIconsLinks(arrLinks) {
 // RETURN WELCOME
 function returnPersonalData(per) {
 
-    console.log(personalDomT)
+    // console.log(personalDomT)
     var personalDomT = document.getElementById("welcome-title");
-    personalDomT.innerHTML = `${per.name}<hr class="welcome-hr">
+    personalDomT.innerHTML = `${per.name}<span class="spanT">K</span><hr class="welcome-hr">
     <p class='welcome-subtitle'>${per.jobrole}</>
     `;
 }
@@ -116,28 +136,65 @@ function returnPersonalData(per) {
 // SKILSS BARS
 function returnSkillsBars(perSkill, string) {
     var wrapperFrontEnd = document.getElementById(`welcome-${string}`);
-    wrapperFrontEnd.innerHTML += "<h3 style='margin-bottom: 5%'>"+`${string}`+"</h3>";
+    wrapperFrontEnd.innerHTML += "<h3 style='margin-bottom: 5%'>" + `${string}` + "</h3>";
     Object.keys(perSkill).forEach(skill => {
-        console.log(skill)
-        console.log(iconsLang[skill])
-        console.log(perSkill[skill])
+        // console.log(skill)
+        // console.log(iconsLang[skill])
+        // console.log(perSkill[skill])
         wrapperFrontEnd.innerHTML += `
+        <div class='${skill}-div'>
+        <h5 style="position: relative;right:20%; color: ${iconsLang[skill][1]}">${iconsLang[skill][2]}</h5>
+        <p data-value="${perSkill[skill]}">${iconsLang[skill][0]}</p>
+        <progress max="100" value="${perSkill[skill]}" class="${skill}">
         
-        <p data-value="${perSkill[skill]}">${iconsLang[skill]}</p>
-        <progress max="100" value="${perSkill[skill]}" class="html5">
-            
-            <div class="progress-bar">
-                <span style="width: 80%; color: black">${perSkill[skill]}%</span>
-            </div>
+        <div class="progress-bar">
+        <span style="width: 80%; ">${perSkill[skill]}%</span>
+        </div>
         </progress>
+        </div>
         `
+
+
+
+
     })
 
-    
+    // sheet.insertRule(`
+    // .${skill}[value]::-moz-progress-bar {
+    //     background-image:
+
+    //     -moz-linear-gradient(left, ${iconsLang[skill][1]} 23%, ${iconsLang[skill][1]});
+
+    // }
+    //     `, sheet.cssRules.length);
+
 }
-returnSkillsBars(personal.skills.frontend, "frontend")
-returnSkillsBars(personal.skills.backend, "backend")
-returnSkillsBars(personal.skills.other, "other")
+
+function setStyleBar(perSkill) {
+
+    Object.keys(perSkill).forEach(skill => {
+        var sheet = window.document.styleSheets[0];
+        sheet.insertRule(`
+            .${skill}::-webkit-progress-value {
+                background-image:
+        
+                    -webkit-linear-gradient(top,
+                        rgba(255, 255, 255, .25),
+                        rgba(0, 0, 0, .2)),
+                    -webkit-linear-gradient(left, ${iconsLang[skill][1]} 23%, ${iconsLang[skill][1]});
+                    border-radius:3px;
+        
+                }
+                `, sheet.cssRules.length);
+
+
+    })
+}
+
+
+
+
+
 // RETURN PRODUCTS)
 function createProjects(pro) {
     var projectDom = document.getElementById("projects");
@@ -166,15 +223,43 @@ function createProjects(pro) {
         </div>
         </div>
         </div>
-   
+        
         `
+        
         // ${projects[project].proCodeP}
         // ${projects[project].proGit}
+        
+    }    );
+    setStyleBar(personal.skills.backend)
+    setStyleBar(personal.skills.frontend)
+    setStyleBar(personal.skills.other)
 
-    });
+    returnSkillsBars(personal.skills.frontend, "frontend")
+    returnSkillsBars(personal.skills.backend, "backend")
+    returnSkillsBars(personal.skills.other, "other")
 
+    
 }
 
-returnPersonalData(personal)
+// returnPersonalData(personal)
 
+window.addEventListener('load', function () {
+    // alert("eco")
+})
 createProjects(projects)
+
+
+
+
+// console.log(wrapper[0])
+// wrapper[0].setAttribute
+
+// .html5::-webkit-progress-value {
+//     /* Gradient background with Stripes */
+//     background-image:
+
+//         -webkit-linear-gradient(top,
+//             rgba(255, 255, 255, .25),
+//             rgba(0, 0, 0, .2)),
+//         -webkit-linear-gradient(left,var(--text-color-highlight) 1%, var(--text-color-normal));
+//     }
