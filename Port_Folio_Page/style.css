@@ -5,6 +5,7 @@
 :root {
     --col-hueso1: #C7C0B3;
     --col-hueso2: #F0EDEB;
+    --fo1-blue: #040D21;
 
 }
 
@@ -28,7 +29,7 @@
 #welcome-section {
     height: fit-content;
     margin-bottom: 2rem;
-    background-color: var(--col-hueso2);
+    background-color: var(--fo1-blue);
 
 }
 
@@ -36,14 +37,14 @@
     width: 90%;
     height: 40%;
     text-align: center;
-    padding-top: 10rem;
+    /* padding-top: 10rem; */
     margin:  auto;
     background-color: var(--col-hueso1);
 
 }
 
 #welcome-title {
-    font-size: 80px;
+    font-size: 10rem;
 }
 
 .welcome-subtitle {
