@@ -9,7 +9,7 @@ var personal = {
         other: {git: 80,codepen:70,adbXD: 50,adbPS: 60}
         }
 
-    }
+}
 
 var projects = {
 
@@ -53,9 +53,7 @@ var projects = {
         proLang: ["html5", "css3"],
         proLink: "https://codepen.io/mickiticki/pen/ExgOgRw",
         proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
-    },
-
-
+    }
 };
 
 var iconsLang = {
