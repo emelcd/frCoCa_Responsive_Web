@@ -4,39 +4,17 @@ var personal = {
     jobrole: "Junior Web Developer",
     resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, ",
     skills: {
-        frontend: {
-            js: 85,
-            html5: 80,
-            css3: 75,
-            react: 60,
-            vue:40,
-            sass:70,
-            bootstrap:65
-            // codepen: 25,
-            // git: 30
-            
-        },
-        backend: {
-            py: 80,
-            php:24,
-            node: 60,
-            mongo: 70,
-            laravel: 60
-
-        },
-        other: {
-            git: 80,
-            codepen:70,
-            adbXD: 50,
-            adbPS: 60
+        frontend: {js: 85,html5: 80,css3: 75,react: 60,vue:40,sass:70,bootstrap:65},
+        backend: {py: 80,php:24,node: 60,mongo: 70,laravel: 60, mySQL: 20},
+        other: {git: 80,codepen:70,adbXD: 50,adbPS: 60}
         }
 
     }
-}
+
 var projects = {
 
     0: {
-        proGit: "http.com/mickiticki/frCoCa_Responsive_Web",
+        proGit: "https://github.com/mickiticki/frCoCa_Responsive_Web",
         proName: "Product Landing",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["js", "html5", "css3"],
@@ -45,7 +23,7 @@ var projects = {
 
     },
     1: {
-        proGit: "http.com/mickiticki/frCoCa_Responsive_Web",
+        proGit: "https://github.com/mickiticki/frCoCa_Responsive_Web",
         proName: "Survey Form ",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["html5", "css3", "js"],
@@ -53,7 +31,7 @@ var projects = {
         proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
     },
     2: {
-        proGit: "http.com/mickiticki/frCoCa_Responsive_Web",
+        proGit: "https://github.com/mickiticki/frCoCa_Responsive_Web",
         proName: "Tribute Page",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["html5", "css3"],
@@ -61,7 +39,7 @@ var projects = {
         proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
     },
     3: {
-        proGit: "http.com/mickiticki/frCoCa_Responsive_Web",
+        proGit: "https://github.com/mickiticki/frCoCa_Responsive_Web",
         proName: "PortFolio Json",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["html5", "css3"],
@@ -69,7 +47,7 @@ var projects = {
         proImg: "https://cdn.pixabay.com/photo/2015/10/12/15/18/store-984393_960_720.jpg"
     },
     4: {
-        proGit: "http.com/mickiticki/frCoCa_Responsive_Web",
+        proGit: "https://github.com/mickiticki/frCoCa_Responsive_Web",
         proName: "Tech Documentation",
         proDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur harum tempore quia reiciendis nesciunt consectetur aspernatur unde error doloribus perspiciatis",
         proLang: ["html5", "css3"],
@@ -96,7 +74,8 @@ var iconsLang = {
     "react": '<i style="color:#5ED3F3" class="fab fa-react"></i>',
     "mongo": '<i style="color:#4FAC4C"class="devicon-mongodb-plain-wordmark"></i>',
     "adbXD": '<i style="color:#F75EEE"class="devicon-xd-line"></i>',
-    "adbPS": '<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>'
+    "adbPS": '<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>',
+    "mySQL": ' <i class="devicon-mysql-plain-wordmark colored"></i>'
 }
 
 // UTILITY
@@ -116,8 +95,8 @@ function returnIconsLang(arrLang) {
 
 function returnIconsLinks(arrLinks) {
 
-    var mapLinkC = "<a href=" + arrLinks.proLink + "><i class='fab fa-codepen'></i></a>";
-    var mapLinkG = "<a href=" + arrLinks.proGit + "><i class='fab fa-github'></i></a>";
+    var mapLinkC = "<a href='" + arrLinks.proLink + "'><i class='fab fa-codepen'></i></a>";
+    var mapLinkG = "<a href='" + arrLinks.proGit + "'><i class='fab fa-github'></i></a>";
 
     return `${mapLinkC}
     ${mapLinkG}`;
@@ -186,9 +165,10 @@ function createProjects(pro) {
         <div class="project-thumbnail-left">
         ${returnIconsLinks(projects[project])}
         </div>
-        </div></div></div>
+        </div>
+        </div>
+        </div>
    
-
         `
         // ${projects[project].proCodeP}
         // ${projects[project].proGit}

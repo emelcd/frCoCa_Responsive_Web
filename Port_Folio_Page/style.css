@@ -13,12 +13,13 @@
     padding: 0;
     font-family: 'Fira Code', monospace;
     transition: .2s;
-    /* overflow: hidden; */
+    /* overflow: den; */
 
 }
 
 #main {
     height: 100vh;
+    width: 100vw;
 }
 
 
@@ -94,7 +95,7 @@
 }
 
 #welcome-wrapper i{
-    font-size: 250%;
+    font-size: 65px;
 }
 
 #wrapper-prog {
@@ -210,7 +211,7 @@ p[data-value]:after {
     flex-wrap: wrap;
     margin-bottom: 1rem;
     padding: 1rem;
-    width: 100vw;
+    width: 90vw;
     /* padding-block: 10rem; */
 }
 
@@ -222,7 +223,7 @@ p[data-value]:after {
 
 .project-item {
     width: 17.5rem;
-    height: 20rem;
+    height: 22rem;
     padding: 0.125rem;
     background-color: #e9e9e9;
     margin-top: 0.125rem;
@@ -230,7 +231,7 @@ p[data-value]:after {
 
 .project-item-name {
     position: relative;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 
 }
 
