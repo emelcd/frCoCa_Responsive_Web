@@ -20,7 +20,7 @@ var personal = {
             node: 60,
             mongo: 70,
             laravel: 60,
-            mySQL: 20
+            mySQL: 20, express:30
         },
         other: {
             git: 80,
@@ -95,6 +95,7 @@ var iconsLang = {
     "adbXD": ['<i style="color:#F75EEE"class="devicon-xd-line"></i>', "#F75EEE", "adobeXD"],
     "adbPS": ['<i style="color:#2FA3F7"class="devicon-photoshop-plain"></i>', "#2FA3F7", "AdobePS"],
     "mySQL": [' <i class="devicon-mysql-plain-wordmark colored"></i>', "#DD8716", "mySQL"],
+    "express": ['<i class="devicon-express-original-wordmark"></i>',"","Express.js"]
 }
 
 // UTILITY
@@ -181,7 +182,9 @@ function returnLearning(arrLearn) {
     // console.log(mapedIcons)
     // console.log(mapedIcons)
     learningWrapper.innerHTML += `
-    <div id="learning-icons"><h4>RIGHT NOW LEARNING</h4>${mapedIcons.join(" ")}</div>
+    
+    <div id="learning-icons"><h6>RIGHT NOW LEARNING</h6><div id="icons-animation">${mapedIcons.join(" ")}</div></div>
+    
     `
 }
 returnLearning(personal.learning)
