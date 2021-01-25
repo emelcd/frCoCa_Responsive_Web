@@ -14,6 +14,12 @@
     --text-color-richer: #94b8db;
     --text-color-highlight: #c36522;
 
+    --code-back: #0F111A;
+    --code-dec: #C792EA; /*DECLARATIVES*/
+    --code-fun: #82AAFF; /*FUNCTIONS*/
+    --code-gold: #F0D700;
+    --code-grey: #A6ACCD;
+
 }
 
 * {
@@ -34,6 +40,20 @@ body {
     background-color: var(--back-color);
 }
 
+#welcome-skill-1 {
+    background-color: var(--code-back);
+    color: var(--text-color-normal);
+    position: absolute;
+    top: 0;
+    /* transition: 2s; */
+    text-align: left;
+    height: 200px;
+
+    /* display: flex;
+    justify-content: left; */
+    
+    
+}
 
 
 /* WELCOME SECTION */
@@ -51,40 +71,109 @@ body {
     /* padding-top: 10rem; */
     margin:  auto;
     background-color: var(--back-color);
+    margin-top: 20rem;
     
 }
 
 #welcome-title {
-    margin-top: 20rem;
-    font-size: 8rem;
-    color: var(--text-color-light);
-    animation: blink 1s infinite;
-    animation-direction: alternate;
-    height: 100vh;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    margin: auto;
+
 }
 
-.spanT {
-    font-size: 10rem;
-    color: var(--text-color-highlight);
-    transition: .5S;
-    /* transform: skew(25deg, 25deg */
-}
+#learning-icons {
+    position: relative;
+    /* background-color: var(--back2-color); */
+    color: white;
+    width: fit-content;
+    text-align: center;
+    padding: .250rem;
+    margin: auto;
+    font-size: 0.5rem;
+    top: 2vh;
 
-@keyframes blink {
-    0% {
-    }
-    100% {
-        opacity: .1;
-    }
-}
-
-
-.welcome-subtitle {
-    font-size: 20px;
-    color: var(--text-color-richer);
-    margin-bottom: 2rem;
+    /* display: block; */
+    
     
 }
+#learning-icons i{
+    margin-top: 1rem;
+    padding: .125rem;
+    animation: blink 1s infinite;
+    animation-direction: alternate;
+
+    /* display: block; */
+    
+    
+}
+@keyframes blink{
+    0% {
+        opacity: 1;
+        right: 3rem;
+    }
+    100% {
+        opacity: .2;
+        right: -5rem;
+
+    }
+    
+
+}
+.spanT {
+    animation: breath1 3s infinite;
+    animation-direction: alternate;
+    /* font-size: 8rem; */
+    color: var(--col-hueso1);
+    /* position: absolute; */
+
+}
+
+
+
+@keyframes breath1 {
+    0% {
+    }
+
+    100% {
+        opacity: .9;
+        color: var(--code-fun);
+        font-size: 8rem;
+        transform-origin: left;
+    }
+}
+/**/
+
+
+#welcome-subtitle {
+    font-size: 22px;
+    color: var(--text-color-richer);
+    margin-bottom: 2rem;
+
+    
+}
+
+#welcome-breath {
+    height: 0vh;
+    background-color: var(--back2-color);
+    margin-top: 2rem;
+    animation: breath3 3s infinite;
+    animation-direction: alternate;
+    position: sticky;
+    /* bottom: 20rem; */
+    top: 60vh;
+}
+/* 
+@keyframes breath3 {
+    0% {
+    }
+    
+    100% {
+        height: 10vh;
+
+    }
+} */
 
 .welcome-hr {
     width: 50%;
@@ -92,12 +181,13 @@ body {
 }
 
 
+
 #welcome-wrapper i{
-    font-size: 3.5rem;
+    font-size: 1.5rem;
     position: relative;
     /* transition: 2s; */
     margin-bottom: rem;
-    /* animation: blink 20s infinite; */
+    /* animation: breath1 20s infinite; */
 }
 
 #welcome-frontend {
@@ -109,14 +199,25 @@ body {
     height: fit-content;
     /* height: m; */
     border-radius: 20px;
+    animation: breath2 3s infinite;
+    animation-direction: alternate;
+    
+    
     /* box-shadow: 13px 13px 0px 0px #b9b9b91a; */
     
     
 }
-
-.progress::-webkit-progress-value {
-    animation: extend 2s infinite;
+@keyframes breath2 {
+    0% {
+        color: white;
+    }
+    
+    100% {
+        color: var(--code-fun);
+    }
 }
+
+
 
 
 #welcome-backend {
@@ -128,6 +229,8 @@ body {
     /* height: m; */
     height: fit-content;
     border-radius: 20px;
+    animation: breath2 3s infinite;
+    animation-direction: alternate;
     
     /* animation: extend 1s ease-out; */
 }
@@ -137,6 +240,8 @@ body {
     color: var(--text-color-richer);
     position: relative;
     width: 40%;
+    animation: breath2 3s infinite;
+    animation-direction: alternate;
     height: fit-content;
     margin: auto;
     border-radius: 20px;
@@ -244,9 +349,10 @@ progress[value]::-webkit-progress-value:after {
 
 
 
-p[data-value] {
-
+.html5 p[data-value] {
     position: relative;
+    /* color: yellow; */
+    animation: breath2 10s infinite;
 }
 
 /* The percentage will automatically fall in place as soon as we make the width fluid. Now making widths fluid. */
@@ -254,7 +360,7 @@ p[data-value] {
 p[data-value]:after {
     content: attr(data-value) '%';
     position: absolute;
-    right: .725rem;
+    right: 1rem;
 }
 
 progress::-webkit-progress-value {

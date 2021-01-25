@@ -2,6 +2,7 @@
 var personal = {
     name: "Mick",
     jobrole: "Junior Web Developer",
+    learning: ["react","js","html5","css3"],
     resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, ",
     skills: {
         frontend: {
@@ -132,7 +133,58 @@ function returnPersonalData(per) {
     <p class='welcome-subtitle'>${per.jobrole}</>
     `;
 }
+function twC(text, codeColor) {
+    var colors = {
+        0: "--code-dec",
+        1: "--code-fun",
+        2: "--code-gold",
+        3: "--code-grey",
+        4: "--code-turq"
+    }
+    // console.log(colors[codeColor]);
+    let coloredOut = `<span style='color: var(${colors[codeColor]})'>${text}</span>`
+    return coloredOut;
+}
 
+var codedText = {
+    0: [("function",0), ("returnIconsLinks", 1), ("(",3),("arrLinks",3),(")",2),("{",2)]
+}
+
+console.log(codedText[1]);
+
+
+function returnTextWrapper() {
+    var textWrapper = document.getElementById("welcome-skill-1");
+    textWrapper.innerHTML += `
+    <p>${twC("function", 0)} ${twC("returnIconsLinks", 1)}${twC("(",2)}${twC("arrLinks",3)}${twC(")",2)}${twC("{",2)}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;${twC("let", 0)} ${twC("mapedIcons",3)} ${twC("=",4)}
+    <br>
+    <br>
+    <br>
+    <br>
+    ${twC("}",2)}
+    </p>
+
+    `}
+    // var mapedIcons = arrLang.map(lang => {
+
+
+// returnTextWrapper();
+// RETURN LEARNING 
+function returnLearning(arrLearn) {
+    var learningWrapper = document.getElementById("welcome-subtitle");
+    console.log(arrLearn);
+    var mapedIcons = arrLearn.map(lang => {
+        // console.log(lang)
+        return iconsLang[lang][0];
+    })
+    // console.log(mapedIcons)
+    // console.log(mapedIcons)
+    learningWrapper.innerHTML += `
+    <div id="learning-icons"><h4>RIGHT NOW LEARNING</h4>${mapedIcons.join(" ")}</div>
+    `
+}
+returnLearning(personal.learning)
 // SKILSS BARS
 function returnSkillsBars(perSkill, string) {
     var wrapperFrontEnd = document.getElementById(`welcome-${string}`);
@@ -190,10 +242,6 @@ function setStyleBar(perSkill) {
 
     })
 }
-
-
-
-
 
 // RETURN PRODUCTS)
 function createProjects(pro) {
