@@ -72,15 +72,13 @@ body {
     /* padding-top: 10rem; */
     margin:  auto;
     background-color: var(--back-color);
-    margin-top: 20rem;
-    
+    margin-top: 3rem;    
 }
 
 #welcome-title {
     font-size: 3rem;
     color: white;
     position: relative;
-    margin: auto;
 
 }
 
@@ -133,25 +131,21 @@ body {
 
 
 #icons-animation {
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    /* border-top: 1px solid white;
+    border-bottom: 1px solid white; */
     padding-bottom: 1rem;
     padding-top: 1rem;
     margin: 1rem 0 1rem 0;;
     width: fit-content;
-    animation: blink1 1s infinite;
-    animation-direction: alternate;
     margin-bottom: 5rem;
 }
 
 @keyframes blink{
     0% {
         opacity: .2;
-        right: 66%;
     }
     100% {
         opacity: 1;
-        right: -66%;
 
     }
     
@@ -160,10 +154,10 @@ body {
 
 }
 .spanT {
-    animation: breath1 3s infinite;
+    animation: breath1 3s ease-in-out;
     animation-direction: alternate;
-    /* font-size: 8rem; */
-    color: var(--col-hueso1);
+    font-size: 4rem;
+    color: white;
     /* position: absolute; */
 
 }
@@ -174,11 +168,14 @@ body {
     0% {
     }
 
-    100% {
+    50% {
         opacity: .9;
         color: var(--code-fun);
         font-size: 8rem;
         transform-origin: left;
+    }
+    100% {
+
     }
 }
 /**/
@@ -192,26 +189,8 @@ body {
     
 }
 
-#welcome-breath {
-    height: 0vh;
-    background-color: var(--back2-color);
-    margin-top: 2rem;
-    animation: breath3 3s infinite;
-    animation-direction: alternate;
-    position: sticky;
-    /* bottom: 20rem; */
-    top: 60vh;
-}
-/* 
-@keyframes breath3 {
-    0% {
-    }
-    
-    100% {
-        height: 10vh;
 
-    }
-} */
+
 
 .welcome-hr {
     width: 50%;
@@ -233,9 +212,10 @@ body {
     color: var(--text-color-richer);
     position: relative;
     /* transition: 2s; */
-    width: 35%;
+    width: 33%;
     height: fit-content;
     /* height: m; */
+    min-width: 300px;
     border-radius: 20px;
     animation: breath2 3s infinite;
     animation-direction: alternate;
@@ -245,26 +225,15 @@ body {
     
     
 }
-@keyframes breath2 {
-    0% {
-        color: white;
-    }
-    
-    100% {
-        color: var(--code-fun);
-    }
-}
-
-
-
 
 #welcome-backend {
     background-color: var(--back2-color);
     color: var(--text-color-richer);
     
     position: relative;
-    width: 40%;
+    width: 33%;
     /* height: m; */
+    min-width: 300px;
     height: fit-content;
     border-radius: 20px;
     animation: breath2 3s infinite;
@@ -277,22 +246,44 @@ body {
     background-color: var(--back2-color);
     color: var(--text-color-richer);
     position: relative;
-    width: 40%;
+    width: 33%;
+    min-width: 300px;
     animation: breath2 3s infinite;
     animation-direction: alternate;
     height: fit-content;
-    margin: auto;
     border-radius: 20px;
-    margin-top: 1rem;
     /* animation: extend 1s ease-out; */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes breath2 {
+    0% {
+        color: white;
+    }
+    
+    100% {
+
+    }
+}
+
+
+
+
 #wrapper-prog {
     width: 90vw;
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
     flex-wrap: wrap;
     margin: auto;      
-    justify-content: space-around;
 
 }
 .effect7
