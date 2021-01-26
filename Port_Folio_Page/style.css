@@ -233,9 +233,10 @@ body {
     color: var(--text-color-richer);
     position: relative;
     /* transition: 2s; */
-    width: 35%;
+    width: 33%;
     height: fit-content;
     /* height: m; */
+    min-width: 300px;
     border-radius: 20px;
     animation: breath2 3s infinite;
     animation-direction: alternate;
@@ -245,6 +246,49 @@ body {
     
     
 }
+
+#welcome-backend {
+    background-color: var(--back2-color);
+    color: var(--text-color-richer);
+    
+    position: relative;
+    width: 33%;
+    /* height: m; */
+    min-width: 300px;
+    height: fit-content;
+    border-radius: 20px;
+    animation: breath2 3s infinite;
+    animation-direction: alternate;
+    
+    /* animation: extend 1s ease-out; */
+}
+
+#welcome-other {
+    background-color: var(--back2-color);
+    color: var(--text-color-richer);
+    position: relative;
+    width: 33%;
+    min-width: 300px;
+    animation: breath2 3s infinite;
+    animation-direction: alternate;
+    height: fit-content;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 1rem;
+    /* animation: extend 1s ease-out; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes breath2 {
     0% {
         color: white;
@@ -258,34 +302,6 @@ body {
 
 
 
-#welcome-backend {
-    background-color: var(--back2-color);
-    color: var(--text-color-richer);
-    
-    position: relative;
-    width: 40%;
-    /* height: m; */
-    height: fit-content;
-    border-radius: 20px;
-    animation: breath2 3s infinite;
-    animation-direction: alternate;
-    
-    /* animation: extend 1s ease-out; */
-}
-
-#welcome-other {
-    background-color: var(--back2-color);
-    color: var(--text-color-richer);
-    position: relative;
-    width: 40%;
-    animation: breath2 3s infinite;
-    animation-direction: alternate;
-    height: fit-content;
-    margin: auto;
-    border-radius: 20px;
-    margin-top: 1rem;
-    /* animation: extend 1s ease-out; */
-}
 #wrapper-prog {
     width: 90vw;
     display: inline-flex;
