@@ -72,15 +72,13 @@ body {
     /* padding-top: 10rem; */
     margin:  auto;
     background-color: var(--back-color);
-    margin-top: 20rem;
-    
+    margin-top: 3rem;    
 }
 
 #welcome-title {
     font-size: 3rem;
     color: white;
     position: relative;
-    margin: auto;
 
 }
 
