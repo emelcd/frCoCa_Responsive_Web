@@ -2,7 +2,7 @@
 var personal = {
     name: "Mick",
     jobrole: "Junior Web Developer",
-    learning: ["react","js","html5","css3"],
+    learning: ["mongo","express","react","node"],
     resume: "Frontend (Pure HTML/CSS/JS, React, Sass...) and Backend (PHP, Node, MySQL, ",
     skills: {
         frontend: {
@@ -98,6 +98,9 @@ var iconsLang = {
     "express": ['<i class="devicon-express-original-wordmark"></i>',"","Express.js"]
 }
 
+var navBarMenu = {
+    contactMe: "GITHUB"
+}
 // UTILITY
 // RETURN ICONS
 function returnIconsLang(arrLang) {
