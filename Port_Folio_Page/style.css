@@ -25,7 +25,7 @@
   margin: 0;
   padding: 0;
   font-family: "Fira Code", monospace;
-  max-width: 100%;
+
 
   /* transition: .2s; */
   /* overflow: den; */
@@ -43,12 +43,10 @@ body {
 }
 
 header {
-  position: sticky;
+  position: relative;
   top: 0;
-
   z-index: 3;
-
-  /* width: fit-content; */
+  margin-left: 70%;
   width: fit-content;
 
   border-radius: 20px;
@@ -61,7 +59,7 @@ header {
 
 #nav-bar li {
   color: var(--fo1-blue);
-  
+
   display: inline;
   margin: 1rem;
 }
@@ -233,6 +231,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   margin: auto;
+  text-align: center;
+  align-items: center;
 }
 .effect7 {
   position: relative;
@@ -332,8 +332,8 @@ progress::-webkit-progress-value {
 }
 
 .project-item {
-  width: 32rem;
-  height: 26rem;
+  max-width: 100%;
+  height: fit-content;
   margin-bottom: 1.125rem;
   padding: 0.125rem;
   background-color: var(--back2-color);

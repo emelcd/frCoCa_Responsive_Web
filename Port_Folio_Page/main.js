@@ -1,4 +1,3 @@
-// Porfolio DATA
 var personal = {
     name: "Mick",
     jobrole: "Junior Web Developer",
@@ -101,8 +100,6 @@ var iconsLang = {
 var navBarMenu = {
     contactMe: "GITHUB"
 }
-// UTILITY
-// RETURN ICONS
 function returnIconsLang(arrLang) {
 
     var mapedIcons = arrLang.map(lang => {
@@ -128,7 +125,6 @@ function returnIconsLinks(arrLinks) {
 
 
 }
-// RETURN WELCOME
 function returnPersonalData(per) {
 
     // console.log(personalDomT)
@@ -170,11 +166,6 @@ function returnTextWrapper() {
     </p>
 
     `}
-    // var mapedIcons = arrLang.map(lang => {
-
-
-// returnTextWrapper();
-// RETURN LEARNING 
 function returnLearning(arrLearn) {
     var learningWrapper = document.getElementById("welcome-subtitle");
     console.log(arrLearn);
@@ -191,7 +182,6 @@ function returnLearning(arrLearn) {
     `
 }
 returnLearning(personal.learning)
-// SKILSS BARS
 function returnSkillsBars(perSkill, string) {
     var wrapperFrontEnd = document.getElementById(`welcome-${string}`);
     wrapperFrontEnd.innerHTML += "<h3 style='margin-bottom: 5%'>" + `${string}` + "</h3>";
@@ -249,7 +239,6 @@ function setStyleBar(perSkill) {
     })
 }
 
-// RETURN PRODUCTS)
 function createProjects(pro) {
     var projectDom = document.getElementById("projects");
     Object.keys(pro).forEach(project => {
@@ -295,7 +284,6 @@ function createProjects(pro) {
     
 }
 
-// returnPersonalData(personal)
 
 window.addEventListener('load', function () {
     // alert("eco")
@@ -305,15 +293,3 @@ createProjects(projects)
 
 
 
-// console.log(wrapper[0])
-// wrapper[0].setAttribute
-
-// .html5::-webkit-progress-value {
-//     /* Gradient background with Stripes */
-//     background-image:
-
-//         -webkit-linear-gradient(top,
-//             rgba(255, 255, 255, .25),
-//             rgba(0, 0, 0, .2)),
-//         -webkit-linear-gradient(left,var(--text-color-highlight) 1%, var(--text-color-normal));
-//     }
